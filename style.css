@@ -1,41 +1,37 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: sans-serif;
-  line-height: 1.6;
-  padding: 20px;
-  background-color: #f9f9f9;
+  margin: 0;
+  font-family: "Hiragino Mincho ProN", serif;
   color: #333;
 }
 
-header {
-  background-color: #4CAF50;
+/* ヒーロー */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb") center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
-  padding: 15px;
   text-align: center;
 }
 
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-main {
-  margin: 20px 0;
-}
-
-footer {
+/* コンセプト */
+.concept {
+  padding: 80px 20px;
   text-align: center;
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #666;
+}
+
+.concept h2 {
+  margin-bottom: 20px;
+}
+
+/* 画像 */
+.image-section img {
+  width: 100%;
 }
