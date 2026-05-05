@@ -75,11 +75,18 @@ body {
   align-items: center;
   color: white;
   text-align: center;
+  background-blend-mode: darken;
+  background-color: rgba(0,0,0,0.3);
 }
 
 .hero h1 {
   font-size: 3rem;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
+}
+
+.concept p {
+  line-height: 2.2;
+  letter-spacing: 1px;
 }
 
 .hero p {
@@ -125,8 +132,12 @@ body {
   }
 
   .nav a {
-    margin: 12px 0;
-  }
+  margin-left: 28px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
 
   .hamburger {
     display: flex;
