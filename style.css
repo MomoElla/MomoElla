@@ -26,15 +26,6 @@ body {
   padding: 15px 30px;
 }
 
-.header {
-  background: rgba(255,255,255,0.8);
-  backdrop-filter: blur(10px);
-}
-
-.logo img {
-  height: 60px;
-  width: auto;
-  display: block;
 }
 
 .logo {
