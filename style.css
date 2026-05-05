@@ -19,9 +19,9 @@ body {
   color: #333;
   padding-top: 70px;
 }
-  .main-image {
-  border-radius: 10px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+ .main-image {
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
 }
 
 /* ===== header ===== */
@@ -100,19 +100,13 @@ body {
 }
 
 .tab {
-  background: none;
-  border: none;
-  margin: 0 12px;
-  font-family: 'Noto Serif JP', serif;
-  font-size: 1rem;
-  cursor: pointer;
-  opacity: 0.5;
-  transition: 0.3s;
+  padding: 8px 14px;
+  border-bottom: 1px solid transparent;
 }
 
 .tab.active {
-  opacity: 1;
   border-bottom: 1px solid #333;
+  opacity: 1;
 }
 
 /* content */
@@ -209,7 +203,21 @@ body {
   font-weight: 400;
   letter-spacing: 3px;
 }
-  section {
+ section {
   padding: 120px 20px;
+}
+
+.villas {
+  background: #f3f2ee;
+}
+  .fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 }
