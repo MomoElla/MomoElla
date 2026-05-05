@@ -12,7 +12,9 @@ html {
 }
 
 body {
+  body {
   font-family: 'Noto Serif JP', serif;
+  letter-spacing: 1px;
   background: #faf9f6;
   color: #333;
   padding-top: 70px;
@@ -20,17 +22,18 @@ body {
 
 /* ===== header ===== */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(250,249,246,0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  z-index: 999;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
+.logo img {
+  height: 40px;
 }
-
 
 .nav {
   display: flex;
@@ -61,29 +64,20 @@ body {
 
 /* ===== hero ===== */
 .hero {
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb") center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-
-  background-blend-mode: darken;
-  background-color: rgba(0,0,0,0.3);
+  position: relative;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  letter-spacing: 6px;
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
 }
 
-.hero p {
-  margin-top: 16px;
-  font-size: 1.1rem;
+.hero h1, .hero p {
+  position: relative;
+  z-index: 1;
 }
-
 /* ===== villas ===== */
 .villas {
   padding: 100px 20px;
