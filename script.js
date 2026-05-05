@@ -1,10 +1,13 @@
 const hamburger = document.getElementById("hamburger");
 const nav = document.querySelector(".nav");
 
-hamburger.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
-function showVilla(id) {
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+}
+
+function showVilla(id, el) {
   const contents = document.querySelectorAll(".villa-content");
   const tabs = document.querySelectorAll(".tab");
 
@@ -12,5 +15,10 @@ function showVilla(id) {
   tabs.forEach(t => t.classList.remove("active"));
 
   document.getElementById(id).classList.add("active");
-  event.target.classList.add("active");
+  el.classList.add("active");
+}
+
+function changeImage(villa, el) {
+  const main = document.getElementById("mainImage-" + villa);
+  main.src = el.src;
 }
