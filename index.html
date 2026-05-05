@@ -3,115 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MomoElla</title>
+  <title>MomoElla Villas</title>
 
-   <link rel="stylesheet" href="style.css">
-
+  <!-- CSS（ここ重要！） -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ===== header ===== -->
 <header class="header">
+
   <div class="logo">
-  <img src="logo.png" alt="Momo Villas">
-</div>
-  <div>MomoElla</div>
+    <img src="logo.png" alt="MomoElla">
+  </div>
+
   <nav class="nav">
     <a href="#">Home</a>
     <a href="#">About</a>
-     <a href="#">Our Speciality</a>
-   <a href="#villas">Villas</a>
+    <a href="#">Our Speciality</a>
+    <a href="#villas">Villas</a>
     <a href="#">Contact</a>
   </nav>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
 </header>
 
+<!-- ===== hero ===== -->
 <section class="hero">
-  <h1>Relax & Reconnect</h1>
+  <h1>MomoElla Villas</h1>
+  <p>Luxury stay surrounded by nature</p>
 </section>
 
-<!--  ここがヴィラセクション -->
+<!-- ===== villas ===== -->
 <section class="villas" id="villas">
 
   <h2>Our Villas</h2>
 
+  <!-- tabs -->
   <div class="tabs">
-    <button class="tab active" onclick="showVilla('deluxe', this)">Deluxe</button>
-     <button class="tab active" onclick="showVilla('standard', this)">Standard</button>
-     <button class="tab active" onclick="showVilla('lux1', this)">Luxury 1</button>
-       <button class="tab active" onclick="showVilla('lux2', this)">Luxury 2</button>
+    <button class="tab active" onclick="showVilla('deluxe')">Deluxe</button>
+    <button class="tab" onclick="showVilla('standard')">Standard</button>
+    <button class="tab" onclick="showVilla('luxury1')">Luxury 1</button>
+    <button class="tab" onclick="showVilla('luxury2')">Luxury 2</button>
   </div>
 
-  <!-- Deluxe -->
+  <!-- ===== Deluxe ===== -->
   <div class="villa-content active" id="deluxe">
+
     <img id="mainImage-deluxe" class="main-image"
       src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
 
     <div class="thumbnails">
-      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" onclick="changeImage('deluxe', this)">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" onclick="changeImage('deluxe', this)">
-      <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" onclick="changeImage('deluxe', this)">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2"
+        onclick="changeImage('deluxe', this)">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+        onclick="changeImage('deluxe', this)">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+        onclick="changeImage('deluxe', this)">
     </div>
 
-    <p class="desc">A refined villa designed for comfort and calm.</p>
+    <p class="desc">
+      A spacious villa with elegant interiors and a peaceful atmosphere.
+    </p>
+
   </div>
 
-  <!-- Standard -->
+  <!-- ===== Standard ===== -->
   <div class="villa-content" id="standard">
+
     <img id="mainImage-standard" class="main-image"
-      src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+      src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688">
 
     <div class="thumbnails">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" onclick="changeImage('standard', this)">
-      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" onclick="changeImage('standard', this)">
+      <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"
+        onclick="changeImage('standard', this)">
+      <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb"
+        onclick="changeImage('standard', this)">
     </div>
 
-    <p class="desc">Simple and cozy space.</p>
+    <p class="desc">
+      Comfortable and simple design for a relaxing stay.
+    </p>
+
   </div>
 
-  <!-- Luxury 1 -->
-  <div class="villa-content" id="lux1">
-    <img id="mainImage-lux1" class="main-image"
-      src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
+  <!-- ===== Luxury 1 ===== -->
+  <div class="villa-content" id="luxury1">
+
+    <img id="mainImage-luxury1" class="main-image"
+      src="https://images.unsplash.com/photo-1501183638710-841dd1904471">
 
     <div class="thumbnails">
-      <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" onclick="changeImage('lux1', this)">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" onclick="changeImage('lux1', this)">
+      <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471"
+        onclick="changeImage('luxury1', this)">
+      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+        onclick="changeImage('luxury1', this)">
     </div>
 
-    <p class="desc">Luxury villa with premium experience.</p>
+    <p class="desc">
+      Premium luxury villa with modern architecture and stunning views.
+    </p>
+
   </div>
 
-  <!-- Luxury 2 -->
-  <div class="villa-content" id="lux2">
-    <img id="mainImage-lux2" class="main-image"
-      src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914">
+  <!-- ===== Luxury 2 ===== -->
+  <div class="villa-content" id="luxury2">
+
+    <img id="mainImage-luxury2" class="main-image"
+      src="https://images.unsplash.com/photo-1523217582562-09d0def993a6">
 
     <div class="thumbnails">
-      <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" onclick="changeImage('lux2', this)">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" onclick="changeImage('lux2', this)">
+      <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6"
+        onclick="changeImage('luxury2', this)">
+      <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353"
+        onclick="changeImage('luxury2', this)">
     </div>
 
-    <p class="desc">Ultimate luxury stay.</p>
+    <p class="desc">
+      Exclusive villa offering privacy and ultimate comfort.
+    </p>
+
   </div>
 
 </section>
 
-<script>
-function showVilla(id) {
-  const contents = document.querySelectorAll(".villa-content");
-  const tabs = document.querySelectorAll(".tab");
-
-  contents.forEach(c => c.classList.remove("active"));
-  tabs.forEach(t => t.classList.remove("active"));
-
-  document.getElementById(id).classList.add("active");
-  event.target.classList.add("active");
-}
-
-function changeImage(villa, el) {
-  document.getElementById("mainImage-" + villa).src = el.src;
-}
-</script>
+<!-- ===== JS ===== -->
+<script src="script.js"></script>
 
 </body>
 </html>
