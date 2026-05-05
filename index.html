@@ -5,117 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MomoElla</title>
 
-  <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style.css">
 
-  <style>
-    /* フォント */
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&display=swap');
-
-    body {
-      font-family: 'Noto Serif JP', serif;
-      margin: 0;
-      padding-top: 70px;
-      background: #faf9f6;
-      color: #333;
-    }
-
-    /* header */
-    .header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.9);
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 30px;
-      z-index: 1000;
-    }
-
-    .nav {
-      display: flex;
-    }
-
-    .nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #333;
-    }
-
-    /* hero */
-    .hero {
-      height: 100vh;
-      background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb") center/cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-    }
-
-    /* villas */
-    .villas {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .tabs {
-      margin: 30px 0;
-    }
-
-    .tab {
-      margin: 0 10px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      opacity: 0.5;
-    }
-
-    .tab.active {
-      opacity: 1;
-      border-bottom: 1px solid #333;
-    }
-
-    .villa-content {
-      display: none;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .villa-content.active {
-      display: block;
-    }
-
-    /* メイン画像 */
-    .main-image {
-      width: 100%;
-      margin-bottom: 15px;
-    }
-
-    /* サムネイル */
-    .thumbnails {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .thumbnails img {
-      width: 80px;
-      height: 60px;
-      object-fit: cover;
-      cursor: pointer;
-      opacity: 0.6;
-    }
-
-    .thumbnails img:hover {
-      opacity: 1;
-    }
-
-    .desc {
-      line-height: 1.8;
-    }
-
-  </style>
 </head>
 
 <body>
@@ -124,7 +15,10 @@
   <div>MomoElla</div>
   <nav class="nav">
     <a href="#">Home</a>
-    <a href="#villas">Villas</a>
+    <a href="#">About</a>
+     <a href="#">Our Speciality</a>
+   <a href="#villas">Villas</a>
+    <a href="#">Contact</a>
   </nav>
 </header>
 
@@ -132,7 +26,7 @@
   <h1>Relax & Reconnect</h1>
 </section>
 
-<!-- ⭐ ここがヴィラセクション -->
+<!--  ここがヴィラセクション -->
 <section class="villas" id="villas">
 
   <h2>Our Villas</h2>
