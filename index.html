@@ -1,106 +1,220 @@
 <!DOCTYPE html>
 <html lang="ja">
-<header class="header">
-  <div class="logo">Momo　Ella</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MomoElla</title>
 
-  <nav class="nav">
-    <a href="#">Home</a>
-    <a href="#">Concept</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+  <link rel="stylesheet" href="style.css">
 
-  <!-- ハンバーガー -->
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-   <link rel="stylesheet" href="style.css">
-</header>
+  <style>
+    /* フォント */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&display=swap');
+
+    body {
+      font-family: 'Noto Serif JP', serif;
+      margin: 0;
+      padding-top: 70px;
+      background: #faf9f6;
+      color: #333;
+    }
+
+    /* header */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      z-index: 1000;
+    }
+
+    .nav {
+      display: flex;
+    }
+
+    .nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* hero */
+    .hero {
+      height: 100vh;
+      background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb") center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    /* villas */
+    .villas {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .tabs {
+      margin: 30px 0;
+    }
+
+    .tab {
+      margin: 0 10px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    .tab.active {
+      opacity: 1;
+      border-bottom: 1px solid #333;
+    }
+
+    .villa-content {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .villa-content.active {
+      display: block;
+    }
+
+    /* メイン画像 */
+    .main-image {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    /* サムネイル */
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .thumbnails img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    .thumbnails img:hover {
+      opacity: 1;
+    }
+
+    .desc {
+      line-height: 1.8;
+    }
+
+  </style>
+</head>
+
 <body>
 
-  <!-- ヒーロー -->
-  <section class="hero">
-    <h1>静かに、自分と向き合う</h1>
-    <p>Calm your mind</p>
-  </section>
-  <section class="villas">
+<header class="header">
+  <div>MomoElla</div>
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#villas">Villas</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Relax & Reconnect</h1>
+</section>
+
+<!-- ⭐ ここがヴィラセクション -->
+<section class="villas" id="villas">
 
   <h2>Our Villas</h2>
 
-  <!-- villas -->
   <div class="tabs">
-    <button class="tab active" onclick="showVilla('deluxe')">Deluxe Villa</button>
-    <button class="tab" onclick="showVilla('standard')">Standard Villa</button>
-    <button class="tab" onclick="showVilla('lux1')">Luxury Villa 1</button>
-    <button class="tab" onclick="showVilla('lux2')">Luxury Villa 2</button>
+    <button class="tab active" onclick="showVilla('deluxe')">Deluxe</button>
+    <button class="tab" onclick="showVilla('standard')">Standard</button>
+    <button class="tab" onclick="showVilla('lux1')">Luxury 1</button>
+    <button class="tab" onclick="showVilla('lux2')">Luxury 2</button>
   </div>
 
-  <!-- Content -->
+  <!-- Deluxe -->
   <div class="villa-content active" id="deluxe">
-    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
-    <p class="desc">
-      A refined villa designed for comfort and calm. Perfect for couples seeking a peaceful retreat.
-    </p>
-    <ul>
-      <li>Private balcony</li>
-      <li>Ocean view</li>
-      <li>King-size bed</li>
-    </ul>
+    <img id="mainImage-deluxe" class="main-image"
+      src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+
+    <div class="thumbnails">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" onclick="changeImage('deluxe', this)">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" onclick="changeImage('deluxe', this)">
+      <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" onclick="changeImage('deluxe', this)">
+    </div>
+
+    <p class="desc">A refined villa designed for comfort and calm.</p>
   </div>
 
+  <!-- Standard -->
   <div class="villa-content" id="standard">
-    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
-    <p class="desc">
-      A simple and cozy space with everything you need for a relaxing stay.
-    </p>
-    <ul>
-      <li>Garden view</li>
-      <li>Queen bed</li>
-      <li>Air conditioning</li>
-    </ul>
+    <img id="mainImage-standard" class="main-image"
+      src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+
+    <div class="thumbnails">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" onclick="changeImage('standard', this)">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" onclick="changeImage('standard', this)">
+    </div>
+
+    <p class="desc">Simple and cozy space.</p>
   </div>
 
+  <!-- Luxury 1 -->
   <div class="villa-content" id="lux1">
-    <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
-    <p class="desc">
-      A luxurious villa with premium interiors and a private pool experience.
-    </p>
-    <ul>
-      <li>Private pool</li>
-      <li>Outdoor lounge</li>
-      <li>Breakfast included</li>
-    </ul>
+    <img id="mainImage-lux1" class="main-image"
+      src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
+
+    <div class="thumbnails">
+      <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" onclick="changeImage('lux1', this)">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" onclick="changeImage('lux1', this)">
+    </div>
+
+    <p class="desc">Luxury villa with premium experience.</p>
   </div>
 
+  <!-- Luxury 2 -->
   <div class="villa-content" id="lux2">
-    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914">
-    <p class="desc">
-      The ultimate luxury stay with panoramic views and exclusive design.
-    </p>
-    <ul>
-      <li>Infinity pool</li>
-      <li>Ocean panorama</li>
-      <li>Butler service</li>
-    </ul>
+    <img id="mainImage-lux2" class="main-image"
+      src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914">
+
+    <div class="thumbnails">
+      <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" onclick="changeImage('lux2', this)">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" onclick="changeImage('lux2', this)">
+    </div>
+
+    <p class="desc">Ultimate luxury stay.</p>
   </div>
 
 </section>
 
-  <!-- コンセプト -->
-  <section class="concept">
-    <h2>Concept</h2>
-    <p>
-      心と体を整える時間を。<br>
-      シンプルで美しい空間を大切にしています。
-    </p>
-  </section>
+<script>
+function showVilla(id) {
+  const contents = document.querySelectorAll(".villa-content");
+  const tabs = document.querySelectorAll(".tab");
 
-  <!-- 画像セクション -->
-  <section class="image-section">
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="">
-  </section>
-<link rel="stylesheet" href="style.css">
+  contents.forEach(c => c.classList.remove("active"));
+  tabs.forEach(t => t.classList.remove("active"));
+
+  document.getElementById(id).classList.add("active");
+  event.target.classList.add("active");
+}
+
+function changeImage(villa, el) {
+  document.getElementById("mainImage-" + villa).src = el.src;
+}
+</script>
+
 </body>
 </html>
