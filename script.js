@@ -22,3 +22,13 @@ function changeImage(villa, el) {
   const main = document.getElementById("mainImage-" + villa);
   main.src = el.src;
 }
+const fades = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", () => {
+  fades.forEach(el => {
+    const rect = el.getBoundingClientRect().top;
+    if (rect < window.innerHeight - 100) {
+      el.classList.add("show");
+    }
+  });
+});
