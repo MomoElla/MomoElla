@@ -1,37 +1,67 @@
+/* フォント（上品） */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
 body {
   margin: 0;
-  font-family: "Hiragino Mincho ProN", serif;
-  color: #333;
+  font-family: 'Noto Serif JP', serif;
 }
 
-/* ヒーロー */
-.hero {
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb") center/cover;
+/* ヘッダー */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 30px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  color: white;
-  text-align: center;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
 }
 
-.hero h1 {
-  font-size: 3rem;
+/* ロゴ */
+.logo {
+  font-size: 1.2rem;
   letter-spacing: 2px;
 }
 
-/* コンセプト */
-.concept {
-  padding: 80px 20px;
-  text-align: center;
+/* ナビ */
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
 }
 
-.concept h2 {
-  margin-bottom: 20px;
+/* ハンバーガー */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
-/* 画像 */
-.image-section img {
-  width: 100%;
+.hamburger span {
+  height: 2px;
+  width: 25px;
+  background: #333;
+  margin: 4px 0;
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+  }
+
+  .nav.active {
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
