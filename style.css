@@ -19,20 +19,25 @@ body {
   color: #333;
   padding-top: 70px;
 }
+  .main-image {
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
 
 /* ===== header ===== */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(250,249,246,0.9);
-  backdrop-filter: blur(10px);
+  background: rgba(250,249,246,0.95);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(0,0,0,0.05);
   z-index: 999;
 }
-
+  
 .logo img {
-  height: 40px;
+  height: 38px;
+  object-fit: contain;
 }
 
 .nav {
@@ -200,4 +205,11 @@ body {
   .hero h1 {
     font-size: 2rem;
   }
+  h2 {
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+  section {
+  padding: 120px 20px;
+}
 }
