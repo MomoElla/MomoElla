@@ -146,4 +146,55 @@ body {
   .hero h1 {
     font-size: 2rem;
   }
+  .villas {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.tabs {
+  margin: 40px 0;
+}
+
+.tab {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.tab.active {
+  opacity: 1;
+  border-bottom: 1px solid #333;
+}
+
+.villa-content {
+  display: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.villa-content.active {
+  display: block;
+}
+
+.villa-content img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.desc {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.villa-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.villa-content li {
+  margin: 5px 0;
 }
