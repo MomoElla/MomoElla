@@ -1,61 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
 
-/* reset */
+/* ===== RESET ===== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* ===== BODY ===== */
 
 body {
-  font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+  font-family: 'Cormorant Garamond', serif;
   background: #f7f4ef;
   color: #4a3427;
   letter-spacing: 1px;
-}
- .main-image {
-  border-radius: 12px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
 }
 
 /* ===== HEADER ===== */
 
 .header {
   width: 100%;
-  padding: 30px 60px;
+  padding: 35px 70px;
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
   background: #f7f4ef;
-}
-.header {
-  border-bottom: 1px solid rgba(74,52,39,0.08);
-}
-  
-.logo img {
-  height: 60px;
-  object-fit: contain;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 999;
 }
 
 /* ===== NAV ===== */
 
 .nav {
   display: flex;
-  gap: 35px;
+  gap: 40px;
 }
 
 .nav a {
   text-decoration: none;
   color: #4a3427;
-  font-size: 1.05rem;
+
+  font-size: 1rem;
   font-weight: 400;
+
   letter-spacing: 2px;
+
   transition: 0.3s;
 }
 
@@ -63,24 +59,10 @@ body {
   opacity: 0.5;
 }
 
-/* ===== hamburger ===== */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 26px;
-  height: 2px;
-  background: #333;
-  margin: 4px 0;
-}
-
 /* ===== HERO ===== */
 
 .hero {
-  min-height: 85vh;
+  min-height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -88,7 +70,7 @@ body {
 
   text-align: center;
 
-  padding: 40px 20px;
+  padding: 140px 20px 80px;
 }
 
 /* ===== HERO CONTENT ===== */
@@ -98,171 +80,185 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 /* ===== LOGO ===== */
 
 .hero-logo {
-  width: 240px;
-  margin-bottom: 30px;
-  object-fit: contain;
-}
-
-.hero-logo img {
-  width: 220px;
+  width: 320px;
   max-width: 80%;
+
+  margin-bottom: 40px;
+
   object-fit: contain;
 }
 
 /* ===== TITLE ===== */
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 400;
+
   letter-spacing: 4px;
-  margin-bottom: 15px;
+
+  margin-bottom: 18px;
 }
+
 /* ===== SUBTITLE ===== */
 
 .hero p {
   font-size: 1.2rem;
+
   letter-spacing: 3px;
+
   font-weight: 300;
 }
 
-/* ===== villas ===== */
+/* ===== VILLAS SECTION ===== */
+
 .villas {
-  padding: 100px 20px;
+  padding: 120px 20px;
+
+  background: #f7f4ef;
+
   text-align: center;
 }
 
 .villas h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 2.8rem;
+
+  margin-bottom: 50px;
+
+  font-weight: 400;
 }
 
-/* tabs */
+/* ===== TABS ===== */
+
 .tabs {
-  margin: 40px 0;
+  margin-bottom: 50px;
 }
 
 .tab {
-  padding: 8px 14px;
-  border-bottom: 1px solid transparent;
+  background: none;
+  border: none;
+
+  margin: 0 15px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1.1rem;
+
+  color: #4a3427;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  opacity: 0.5;
+
+  transition: 0.3s;
 }
 
 .tab.active {
-  border-bottom: 1px solid #333;
   opacity: 1;
+
+  border-bottom: 1px solid #4a3427;
 }
 
-/* content */
+/* ===== VILLA CONTENT ===== */
+
 .villa-content {
   display: none;
-  max-width: 700px;
+
+  max-width: 900px;
+
   margin: 0 auto;
-  animation: fade 0.5s ease;
 }
 
 .villa-content.active {
   display: block;
 }
 
-/* 画像 */
+/* ===== MAIN IMAGE ===== */
+
 .main-image {
   width: 100%;
-  margin-bottom: 15px;
-  border-radius: 6px;
+
+  border-radius: 12px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
-/* サムネイル */
+/* ===== THUMBNAILS ===== */
+
 .thumbnails {
   display: flex;
+
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 25px;
+
+  gap: 12px;
+
+  margin-bottom: 35px;
 }
 
 .thumbnails img {
-  width: 80px;
-  height: 60px;
+  width: 90px;
+  height: 65px;
+
   object-fit: cover;
+
+  border-radius: 6px;
+
   cursor: pointer;
-  opacity: 0.6;
+
+  opacity: 0.7;
+
   transition: 0.3s;
-  border-radius: 4px;
 }
 
 .thumbnails img:hover {
   opacity: 1;
+
   transform: scale(1.05);
 }
 
-/* text */
+/* ===== TEXT ===== */
+
 .desc {
-  margin-bottom: 15px;
   line-height: 2;
-  letter-spacing: 1px;
+
+  font-size: 1.05rem;
+
+  max-width: 700px;
+
+  margin: 0 auto 18px;
 }
 
-/* ===== animation ===== */
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* ===== MOBILE ===== */
 
-/* ===== mobile ===== */
 @media (max-width: 768px) {
 
+  .header {
+    justify-content: center;
+
+    padding: 25px 20px;
+  }
+
   .nav {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: white;
-    flex-direction: column;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
+    gap: 18px;
 
-  .nav.active {
-    display: flex;
-  }
+    flex-wrap: wrap;
 
-  .nav a {
-    margin: 12px 0;
-  }
-
-  .hamburger {
-    display: flex;
+    justify-content: center;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.7rem;
   }
-  h2 {
-  font-weight: 400;
-  letter-spacing: 3px;
-}
- section {
-  padding: 120px 20px;
-}
 
-.villas {
-  background: #f3f2ee;
-}
-  .fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.6s;
-}
+  .hero-logo {
+    width: 220px;
+  }
 
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 }
