@@ -11,13 +11,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  body {
-  font-family: 'Noto Serif JP', serif;
-  letter-spacing: 1px;
-  background: #faf9f6;
-  color: #333;
+ body {
+  font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+  background: #f8f6f2;
+  color: #2f2f2f;
   padding-top: 70px;
+  letter-spacing: 1px;
 }
  .main-image {
   border-radius: 12px;
@@ -29,10 +28,14 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(250,249,246,0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 22px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(248,246,242,0.88);
+  backdrop-filter: blur(12px);
   z-index: 999;
+}
   
 .logo img {
   height: 60px;
@@ -44,12 +47,17 @@ body {
 }
 
 .nav a {
-  margin-left: 20px;
+  margin: 0 18px;
   text-decoration: none;
+  color: #444;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  transition: 0.3s;
 }
 
 .nav a:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 /* ===== hamburger ===== */
@@ -77,7 +85,15 @@ body {
   inset: 0;
   background: rgba(0,0,0,0.35);
 }
+.hero-logo {
+  margin-bottom: 30px;
+}
 
+.hero-logo img {
+  width: 220px;
+  max-width: 80%;
+  object-fit: contain;
+}
 .hero h1, .hero p {
   position: relative;
   z-index: 1;
