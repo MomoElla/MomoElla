@@ -24,15 +24,17 @@ body {
   box-shadow: 0 25px 50px rgba(0,0,0,0.1);
 }
 
-/* ===== header ===== */
+  /* ヘッダー */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(250,249,246,0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  z-index: 999;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
 }
   
 .logo img {
