@@ -11,11 +11,12 @@ html {
   scroll-behavior: smooth;
 }
 
- body {
+/* ===== BODY ===== */
+
+body {
   font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
-  background: #f8f6f2;
-  color: #2f2f2f;
-  padding-top: 70px;
+  background: #f7f4ef;
+  color: #4a3427;
   letter-spacing: 1px;
 }
  .main-image {
@@ -23,18 +24,18 @@ html {
   box-shadow: 0 25px 50px rgba(0,0,0,0.1);
 }
 
-/* ===== header ===== */
+/* ===== HEADER ===== */
+
 .header {
-  position: fixed;
-  top: 0;
   width: 100%;
-  padding: 22px 50px;
+  padding: 30px 60px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  background: rgba(248,246,242,0.88);
-  backdrop-filter: blur(12px);
-  z-index: 999;
+  background: #f7f4ef;
+}
+.header {
+  border-bottom: 1px solid rgba(74,52,39,0.08);
 }
   
 .logo img {
@@ -42,17 +43,19 @@ html {
   object-fit: contain;
 }
 
+/* ===== NAV ===== */
+
 .nav {
   display: flex;
+  gap: 35px;
 }
 
 .nav a {
-  margin: 0 18px;
   text-decoration: none;
-  color: #444;
-  font-size: 1rem;
-  letter-spacing: 2px;
+  color: #4a3427;
+  font-size: 1.05rem;
   font-weight: 400;
+  letter-spacing: 2px;
   transition: 0.3s;
 }
 
@@ -74,19 +77,33 @@ html {
   margin: 4px 0;
 }
 
-/* ===== hero ===== */
+/* ===== HERO ===== */
+
 .hero {
-  position: relative;
+  min-height: 85vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 40px 20px;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
+/* ===== HERO CONTENT ===== */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+/* ===== LOGO ===== */
+
 .hero-logo {
+  width: 240px;
   margin-bottom: 30px;
+  object-fit: contain;
 }
 
 .hero-logo img {
@@ -94,10 +111,23 @@ html {
   max-width: 80%;
   object-fit: contain;
 }
-.hero h1, .hero p {
-  position: relative;
-  z-index: 1;
+
+/* ===== TITLE ===== */
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
 }
+/* ===== SUBTITLE ===== */
+
+.hero p {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
 /* ===== villas ===== */
 .villas {
   padding: 100px 20px;
