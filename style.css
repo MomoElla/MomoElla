@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
 
 /* ===== RESET ===== */
-
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +8,6 @@
 }
 
 /* ===== BODY ===== */
-
 body {
   font-family: 'Cormorant Garamond', serif;
   background: #f7f4ef;
@@ -18,7 +16,6 @@ body {
 }
 
 /* ===== HEADER ===== */
-
 .header {
   width: 100%;
   padding: 35px 70px;
@@ -37,7 +34,6 @@ body {
 }
 
 /* ===== NAV ===== */
-
 .nav {
   display: flex;
   gap: 40px;
@@ -49,7 +45,6 @@ body {
 
   font-size: 1rem;
   font-weight: 400;
-
   letter-spacing: 2px;
 
   transition: 0.3s;
@@ -60,20 +55,16 @@ body {
 }
 
 /* ===== HERO ===== */
-
 .hero {
   min-height: 100vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
   text-align: center;
 
   padding: 140px 20px 80px;
 }
-
-/* ===== HERO CONTENT ===== */
 
 .hero-content {
   display: flex;
@@ -81,58 +72,40 @@ body {
   align-items: center;
 }
 
-/* ===== LOGO ===== */
-
 .hero-logo {
   width: 320px;
   max-width: 80%;
-
   margin-bottom: 40px;
-
   object-fit: contain;
 }
-
-/* ===== TITLE ===== */
 
 .hero h1 {
   font-size: 4.5rem;
   font-weight: 400;
-
   letter-spacing: 4px;
-
   margin-bottom: 18px;
 }
 
-/* ===== SUBTITLE ===== */
-
 .hero p {
   font-size: 1.2rem;
-
   letter-spacing: 3px;
-
   font-weight: 300;
 }
 
-/* ===== VILLAS SECTION ===== */
-
+/* ===== VILLAS ===== */
 .villas {
   padding: 120px 20px;
-
   background: #f7f4ef;
-
   text-align: center;
 }
 
 .villas h2 {
   font-size: 2.8rem;
-
   margin-bottom: 50px;
-
   font-weight: 400;
 }
 
 /* ===== TABS ===== */
-
 .tabs {
   margin-bottom: 50px;
 }
@@ -144,15 +117,12 @@ body {
   margin: 0 15px;
 
   font-family: 'Cormorant Garamond', serif;
-
   font-size: 1.1rem;
 
   color: #4a3427;
-
   letter-spacing: 2px;
 
   cursor: pointer;
-
   opacity: 0.5;
 
   transition: 0.3s;
@@ -160,17 +130,13 @@ body {
 
 .tab.active {
   opacity: 1;
-
   border-bottom: 1px solid #4a3427;
 }
 
 /* ===== VILLA CONTENT ===== */
-
 .villa-content {
   display: none;
-
   max-width: 900px;
-
   margin: 0 auto;
 }
 
@@ -178,78 +144,105 @@ body {
   display: block;
 }
 
-/* ===== MAIN IMAGE ===== */
-
+/* ===== IMAGES ===== */
 .main-image {
   width: 100%;
-
   border-radius: 12px;
-
   margin-bottom: 20px;
-
   box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
-/* ===== THUMBNAILS ===== */
-
 .thumbnails {
   display: flex;
-
   justify-content: center;
-
   gap: 12px;
-
   margin-bottom: 35px;
 }
 
 .thumbnails img {
   width: 90px;
   height: 65px;
-
   object-fit: cover;
 
   border-radius: 6px;
-
   cursor: pointer;
 
   opacity: 0.7;
-
   transition: 0.3s;
 }
 
 .thumbnails img:hover {
   opacity: 1;
-
   transform: scale(1.05);
 }
 
 /* ===== TEXT ===== */
-
 .desc {
   line-height: 2;
-
   font-size: 1.05rem;
-
   max-width: 700px;
-
   margin: 0 auto 18px;
 }
 
-/* ===== MOBILE ===== */
+/* ===== SECTIONS (ABOUT / SPECIALITY / CONTACT) ===== */
+.about,
+.speciality,
+.contact {
+  padding: 100px 30px;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
 
+.about h2,
+.speciality h2,
+.contact h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.about p,
+.contact p {
+  font-size: 20px;
+  line-height: 2;
+}
+
+/* ===== SPECIALITY ===== */
+.speciality-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.speciality-container div {
+  flex: 1;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+}
+
+.speciality-container h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.speciality-container p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
   .header {
     justify-content: center;
-
     padding: 25px 20px;
   }
 
   .nav {
     gap: 18px;
-
     flex-wrap: wrap;
-
     justify-content: center;
   }
 
@@ -261,4 +254,7 @@ body {
     width: 220px;
   }
 
+  .speciality-container {
+    flex-direction: column;
+  }
 }
