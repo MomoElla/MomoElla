@@ -67,7 +67,19 @@ function changeImage(villa, el) {
     main.src = el.src;
   }
 }
+// ===== modal =====
+function openImage(src) {
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
 
+  modal.innerHTML = `
+    <img src="${src}">
+  `;
+
+  modal.onclick = () => modal.remove();
+
+  document.body.appendChild(modal);
+}
 
 // ===== SCROLL FADE =====
 const fades = document.querySelectorAll(".fade");
