@@ -92,4 +92,17 @@ window.addEventListener("scroll", () => {
       el.classList.add("show");
     }
   });
+  function showContact() {
+
+  showPage('home');
+
+  setTimeout(() => {
+
+    document.getElementById('contact')
+      .scrollIntoView({
+        behavior: 'smooth'
+      });
+
+  }, 100);
+}
 });
