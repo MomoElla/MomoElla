@@ -8,102 +8,99 @@ body {
   font-family: 'Cormorant Garamond', serif;
   background: #f7f4ef;
   color: #4a3427;
+  font-size: 20px; /* ← 全体大きく */
+  line-height: 1.8;
 }
 
-/* HEADER */
+/* ===== HEADER（右上固定） ===== */
 .header {
   position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 25px;
-  display: flex;
-  justify-content: center;
-  background: #f7f4ef;
+  top: 30px;
+  right: 40px;
   z-index: 999;
 }
 
 .nav {
   display: flex;
-  gap: 30px;
+  flex-direction: column; /* 右上に縦並び */
+  gap: 15px;
+  text-align: right;
 }
 
 .nav a {
-  cursor: pointer;
+  text-decoration: none;
+  color: #4a3427;
+  font-size: 18px;
+  letter-spacing: 2px;
+  transition: 0.3s;
 }
 
-/* PAGE SYSTEM */
-.page {
-  display: none;
+.nav a:hover {
+  opacity: 0.5;
+}
+
+/* ===== SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== SECTIONS ===== */
+.section {
   min-height: 100vh;
-  padding-top: 120px;
+  padding: 120px 60px;
 }
 
-.page.active {
-  display: block;
-}
-
-.page-inner {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-/* HERO */
+/* ===== HERO ===== */
 .hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 80px 20px;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 5rem; /* ←かなり大きめ */
+  font-weight: 400;
+  letter-spacing: 3px;
 }
 
-/* VILLAS */
-.villas {
-  text-align: center;
-  padding: 80px 20px;
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 10px;
 }
 
-.villa-content {
-  display: none;
+/* ===== TITLES ===== */
+h2 {
+  font-size: 3rem; /* ←セクションタイトル大きく */
+  margin-bottom: 40px;
+  font-weight: 400;
 }
 
-.villa-content.active {
-  display: block;
-}
-
-.villa-content img {
-  width: 100%;
-  max-width: 700px;
-  border-radius: 10px;
-}
-
-/* CONTACT（中央寄せで見せる） */
+/* ===== CONTACT ===== */
 .contact {
   text-align: center;
-  padding: 120px 20px;
+  background: #efe7dd;
+  padding-top: 200px;
 }
 
-/* GALLERY */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 40px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
+  body {
+    font-size: 18px;
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
+  .header {
+    top: 15px;
+    right: 20px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 }
