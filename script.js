@@ -88,14 +88,17 @@ function showContact() {
 
   setTimeout(() => {
 
-    document.getElementById('contact')
-      .scrollIntoView({
-        behavior: 'smooth'
+    const contact = document.getElementById('contact');
+
+    if (contact) {
+      contact.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
       });
+    }
 
-  }, 100);
+  }, 300); // ← 100msだと早すぎることがある
 }
-
 // ===== SCROLL FADE =====
 const fades = document.querySelectorAll(".fade");
 
