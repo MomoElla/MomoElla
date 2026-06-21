@@ -90,14 +90,17 @@ function showContact() {
 
     const contact = document.getElementById('contact');
 
-    if (contact) {
-      contact.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
+    if (!contact) return;
 
-  }, 300); // ← 100msだと早すぎることがある
+    const offset = contact.offsetTop;
+
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth'
+    });
+
+  }, 300);
+
 }
 // ===== SCROLL FADE =====
 const fades = document.querySelectorAll(".fade");
