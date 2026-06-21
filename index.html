@@ -8,58 +8,134 @@
   <title>Momo Ella</title>
 
   <link rel="stylesheet" href="style.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ===== HEADER ===== -->
 <header class="header">
   <nav class="nav">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#speciality">Speciality</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('about')">About</a>
+    <a onclick="showPage('speciality')">Speciality</a>
+    <a onclick="showPage('gallery')">Gallery</a>
+    <a onclick="showPage('contact')">Contact</a>
   </nav>
 </header>
 
-<!-- HOME -->
-<section id="home" class="section">
+<!-- ===== HOME ===== -->
+<section id="home" class="page active">
 
   <div class="hero">
-    <h1>Momo Ella</h1>
-    <p>Luxury stay surrounded by nature</p>
+    <div class="hero-content">
+      <h1>Momo Ella</h1>
+      <p>Luxury stay surrounded by nature</p>
+    </div>
   </div>
 
-  <div class="villas">
+  <!-- Villas only in HOME -->
+  <section class="villas">
+
     <h2>Our Villas</h2>
-    <!-- ここはそのまま -->
+
+    <div class="tabs">
+      <button class="tab active" onclick="showVilla('deluxe', this)">Deluxe</button>
+      <button class="tab" onclick="showVilla('standard', this)">Standard</button>
+      <button class="tab" onclick="showVilla('luxury1', this)">Luxury 1</button>
+      <button class="tab" onclick="showVilla('luxury2', this)">Luxury 2</button>
+    </div>
+
+    <!-- Deluxe -->
+    <div class="villa-content active" id="deluxe">
+      <img id="main-deluxe" class="main-image" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+
+      <div class="thumbnails">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" onclick="changeImage('deluxe', this)">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" onclick="changeImage('deluxe', this)">
+      </div>
+
+      <p class="desc">A spacious villa with elegant interiors.</p>
+    </div>
+
+    <!-- Standard -->
+    <div class="villa-content" id="standard">
+      <img id="main-standard" class="main-image" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688">
+      <p class="desc">Comfortable and simple design.</p>
+    </div>
+
+    <!-- Luxury 1 -->
+    <div class="villa-content" id="luxury1">
+      <img id="main-luxury1" class="main-image" src="https://images.unsplash.com/photo-1501183638710-841dd1904471">
+      <p class="desc">Premium luxury villa experience.</p>
+    </div>
+
+    <!-- Luxury 2 -->
+    <div class="villa-content" id="luxury2">
+      <img id="main-luxury2" class="main-image" src="https://images.unsplash.com/photo-1523217582562-09d0def993a6">
+      <p class="desc">Exclusive privacy and comfort.</p>
+    </div>
+
+  </section>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="page">
+  <div class="page-inner">
+    <h2>About</h2>
+    <p>
+      Welcome to MomoElla Villas in Ella, Sri Lanka.
+      A peaceful luxury stay surrounded by nature.
+    </p>
   </div>
-
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About</h2>
+<!-- ===== SPECIALITY ===== -->
+<section id="speciality" class="page">
+  <div class="page-inner">
+
+    <h2>Our Speciality</h2>
+
+    <div class="grid">
+      <div>
+        <h3>Mountain View</h3>
+        <p>Breathtaking natural scenery.</p>
+      </div>
+
+      <div>
+        <h3>Private Villas</h3>
+        <p>Comfort and privacy combined.</p>
+      </div>
+
+      <div>
+        <h3>Local Experience</h3>
+        <p>Authentic Sri Lankan hospitality.</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- SPECIALITY -->
-<section id="speciality" class="section">
-  <h2>Our Speciality</h2>
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="page">
+  <div class="page-inner">
+    <h2>Gallery</h2>
+    <p>Coming soon...</p>
+  </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery" class="section">
-  <h2>Gallery</h2>
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="page">
+  <div class="page-inner">
+    <h2>Contact</h2>
+    <p>Email: info@momoella.com</p>
+    <p>Instagram: @momoellavillas</p>
+    <p>Ella, Sri Lanka</p>
+  </div>
 </section>
 
-<!-- CONTACT（最下部） -->
-<section id="contact" class="section contact">
-  <h2>Contact</h2>
-  <p>Email: info@momoella.com</p>
-  <p>Instagram: @momoellavillas</p>
-</section>
+<script src="script.js"></script>
 
 </body>
 </html>
