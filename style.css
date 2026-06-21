@@ -1,36 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== BODY ===== */
 body {
   font-family: 'Cormorant Garamond', serif;
   background: #f7f4ef;
   color: #4a3427;
-  font-size: 20px; /* ← 全体大きく */
-  line-height: 1.8;
 }
 
-/* ===== HEADER（右上固定） ===== */
+/* ===== HEADER ===== */
 .header {
   position: fixed;
-  top: 30px;
-  right: 40px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: flex-end;
+  background: #f7f4ef;
   z-index: 999;
 }
 
 .nav {
   display: flex;
-  flex-direction: column; /* 右上に縦並び */
-  gap: 15px;
-  text-align: right;
+  gap: 35px;
 }
 
 .nav a {
+  cursor: pointer;
   text-decoration: none;
   color: #4a3427;
-  font-size: 18px;
   letter-spacing: 2px;
   transition: 0.3s;
 }
@@ -39,68 +44,110 @@ body {
   opacity: 0.5;
 }
 
-/* ===== SMOOTH SCROLL ===== */
-html {
-  scroll-behavior: smooth;
-}
-
-/* ===== SECTIONS ===== */
-.section {
+/* ===== PAGE SYSTEM ===== */
+.page {
+  display: none;
   min-height: 100vh;
-  padding: 120px 60px;
+  padding-top: 120px;
 }
 
-/* ===== HERO ===== */
+.page.active {
+  display: block;
+}
+
+.page-inner {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== HOME HERO ===== */
 .hero {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 5rem; /* ←かなり大きめ */
-  font-weight: 400;
-  letter-spacing: 3px;
+  font-size: 4rem;
 }
 
 .hero p {
-  font-size: 1.5rem;
-  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
-/* ===== TITLES ===== */
-h2 {
-  font-size: 3rem; /* ←セクションタイトル大きく */
-  margin-bottom: 40px;
-  font-weight: 400;
-}
-
-/* ===== CONTACT ===== */
-.contact {
+/* ===== VILLAS ===== */
+.villas {
+  padding: 100px 20px;
   text-align: center;
-  background: #efe7dd;
-  padding-top: 200px;
+}
+
+.tabs {
+  margin: 40px 0;
+}
+
+.tab {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0 15px;
+  opacity: 0.5;
+}
+
+.tab.active {
+  opacity: 1;
+  border-bottom: 1px solid #4a3427;
+}
+
+.villa-content {
+  display: none;
+}
+
+.villa-content.active {
+  display: block;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.thumbnails img {
+  width: 80px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* ===== SPECIALITY GRID ===== */
+.grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.grid div {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  body {
-    font-size: 18px;
-  }
 
   .header {
-    top: 15px;
-    right: 20px;
+    justify-content: center;
+    padding: 20px;
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
-  h2 {
-    font-size: 2rem;
+  .grid {
+    flex-direction: column;
   }
 }
