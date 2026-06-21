@@ -1,126 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
-
-html {
-  scroll-behavior: smooth;
-}
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
 body {
   font-family: 'Cormorant Garamond', serif;
   background: #f7f4ef;
   color: #4a3427;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  padding: 30px 60px;
+  padding: 25px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   background: #f7f4ef;
   z-index: 999;
 }
 
 .nav {
   display: flex;
-  gap: 35px;
+  gap: 30px;
 }
 
 .nav a {
   cursor: pointer;
-  text-decoration: none;
-  color: #4a3427;
-  letter-spacing: 2px;
-  transition: 0.3s;
 }
 
-.nav a:hover {
-  opacity: 0.5;
-}
-.nav a.active {
-  border-bottom: 1px solid #4a3427;
-  opacity: 1;
-}
-
-/* ===== PAGE SYSTEM ===== */
+/* PAGE SYSTEM */
 .page {
+  display: none;
   min-height: 100vh;
   padding-top: 120px;
 }
-.page {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-
-  transition: opacity 0.4s ease;
-}
 
 .page.active {
-  opacity: 1;
-  visibility: visible;
-  position: relative;
+  display: block;
 }
 
 .page-inner {
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
   text-align: center;
 }
 
-section {
-  scroll-margin-top: 120px;
-}
-
-/* ===== HOME HERO ===== */
+/* HERO */
 .hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+  padding: 80px 20px;
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
-.hero p {
-  font-size: 1.2rem;
-}
-
-/* ===== VILLAS ===== */
+/* VILLAS */
 .villas {
-  padding: 100px 20px;
   text-align: center;
-}
-
-.tabs {
-  margin: 40px 0;
-}
-
-.tab {
-  border: none;
-  background: none;
-  cursor: pointer;
-  margin: 0 15px;
-  opacity: 0.5;
-}
-
-.tab.active {
-  opacity: 1;
-  border-bottom: 1px solid #4a3427;
+  padding: 80px 20px;
 }
 
 .villa-content {
@@ -131,85 +72,38 @@ section {
   display: block;
 }
 
-.main-image {
+.villa-content img {
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   border-radius: 10px;
 }
 
-.thumbnails img {
-  width: 80px;
-  margin: 10px;
-  cursor: pointer;
+/* CONTACT（中央寄せで見せる） */
+.contact {
+  text-align: center;
+  padding: 120px 20px;
 }
 
-/* ===== SPECIALITY GRID ===== */
-.grid {
-  display: flex;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.grid div {
-  flex: 1;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-}
+/* GALLERY */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 10px;
   margin-top: 40px;
 }
 
 .gallery-grid img {
   width: 100%;
   border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.03);
-}
-/* ===== MOdal ===== */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background: rgba(0,0,0,0.8);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  z-index: 9999;
-}
-
-.modal img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 10px;
-}
-
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media (max-width: 768px) {
-
-  .header {
-    justify-content: center;
-    padding: 20px;
-  }
-
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
-  .grid {
-    flex-direction: column;
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
 }
