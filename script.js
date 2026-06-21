@@ -81,18 +81,8 @@ function openImage(src) {
   document.body.appendChild(modal);
 }
 
-// ===== SCROLL FADE =====
-const fades = document.querySelectorAll(".fade");
-
-window.addEventListener("scroll", () => {
-  fades.forEach(el => {
-    const rect = el.getBoundingClientRect().top;
-
-    if (rect < window.innerHeight - 100) {
-      el.classList.add("show");
-    }
-  });
-  function showContact() {
+// ===== CONTACT =====
+function showContact() {
 
   showPage('home');
 
@@ -105,4 +95,16 @@ window.addEventListener("scroll", () => {
 
   }, 100);
 }
+
+// ===== SCROLL FADE =====
+const fades = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", () => {
+  fades.forEach(el => {
+    const rect = el.getBoundingClientRect().top;
+
+    if (rect < window.innerHeight - 100) {
+      el.classList.add("show");
+    }
+  });
 });
