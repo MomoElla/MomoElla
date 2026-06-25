@@ -118,35 +118,78 @@ h2 {
   text-align: center;
 }
 /* ===== DELUXE | STANDARD | LUXURY I | LUXURY II ===== */
-.tabs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
+/* ===== VILLA NAVIGATION ===== */
+
+.tabs{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:70px 0;
+
+    gap:0;
 }
 
-.tab {
-    position: relative;
-    padding: 0 25px;
+.tabs button{
+    appearance:none;
+    -webkit-appearance:none;
 }
 
-.tab:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 25%;
-    height: 50%;
-    width: 1px;
-    background: rgba(74,52,39,0.2);
+.tab{
+    background:none;
+    border:none;
+
+    position:relative;
+
+    padding:0 35px 12px;
+
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.2rem;
+
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    color:#9a8a80;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
 }
 
-.tab.active {
-    color: #4a3427;
-    border-bottom: 1px solid #4a3427;
+.tab:hover{
+    color:#4a3427;
 }
 
-.tab:hover {
-    color: #4a3427;
+.tab:not(:last-child)::after{
+    content:"";
+
+    position:absolute;
+
+    right:0;
+    top:25%;
+
+    width:1px;
+    height:50%;
+
+    background:rgba(74,52,39,.15);
+}
+
+.tab.active{
+    color:#4a3427;
+}
+
+.tab.active::before{
+    content:"";
+
+    position:absolute;
+
+    left:35px;
+    right:35px;
+    bottom:0;
+
+    height:1px;
+
+    background:#4a3427;
 }
 
 .villa-content {
