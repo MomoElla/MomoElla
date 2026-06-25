@@ -1,58 +1,40 @@
-// ===== PAGE SWITCH =====
-
-function showPage(pageId) {
-
-    const pages = document.querySelectorAll(".page");
-
-    pages.forEach(page => {
-        page.classList.remove("active");
-    });
-
-    document.getElementById(pageId).classList.add("active");
-
-    // Mobile menu close
-    document.getElementById("navMenu").classList.remove("show");
-}
-
-
-
 // ===== HAMBURGER =====
 
 function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("show");
+  document.getElementById("navMenu").classList.toggle("show");
 }
 
+
+// メニューを押したら自動で閉じる
+
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navMenu").classList.remove("show");
+  });
+});
 
 
 // ===== VILLA TABS =====
 
 function showVilla(villaId, button) {
 
-    const villas = document.querySelectorAll(".villa-content");
+  document.querySelectorAll(".villa-content").forEach(villa => {
+    villa.classList.remove("active");
+  });
 
-    villas.forEach(villa => {
-        villa.classList.remove("active");
-    });
-
-    document.getElementById(villaId).classList.add("active");
+  document.getElementById(villaId).classList.add("active");
 
 
+  document.querySelectorAll(".tab").forEach(tab => {
+    tab.classList.remove("active");
+  });
 
-    const tabs = document.querySelectorAll(".tab");
-
-    tabs.forEach(tab => {
-        tab.classList.remove("active");
-    });
-
-    button.classList.add("active");
+  button.classList.add("active");
 }
 
 
+// ===== IMAGE CHANGE =====
 
-// ===== IMAGE GALLERY =====
-
-function changeImage(villa, img) {
-
-    document.getElementById(`main-${villa}`).src = img.src;
-
+function changeImage(villa, image) {
+  document.getElementById(`main-${villa}`).src = image.src;
 }
