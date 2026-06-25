@@ -1,22 +1,58 @@
-// ===== PAGE SWITCH (NEW) =====
+// ===== PAGE SWITCH =====
+
 function showPage(pageId) {
-  
-document.querySelectorAll(".page").forEach(p => {
-    p.classList.remove("active");
-  });
-document.getElementById(pageId).classList.add("active");
 
-  // ナビ更新
-  document.querySelectorAll(".nav a").forEach(a => {
-    a.classList.remove("active");
-  });
+    const pages = document.querySelectorAll(".page");
 
-  const activeLink = document.querySelector(`.nav a[onclick="showPage('${pageId}')"]`);
-  if (activeLink) {
-    activeLink.classList.add("active");
-  }
+    pages.forEach(page => {
+        page.classList.remove("active");
+    });
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-  const pages = document.querySelectorAll(".page");
+    document.getElementById(pageId).classList.add("active");
 
-  pages.forEach(page => {
+    // Mobile menu close
+    document.getElementById("navMenu").classList.remove("show");
+}
+
+
+
+// ===== HAMBURGER =====
+
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+}
+
+
+
+// ===== VILLA TABS =====
+
+function showVilla(villaId, button) {
+
+    const villas = document.querySelectorAll(".villa-content");
+
+    villas.forEach(villa => {
+        villa.classList.remove("active");
+    });
+
+    document.getElementById(villaId).classList.add("active");
+
+
+
+    const tabs = document.querySelectorAll(".tab");
+
+    tabs.forEach(tab => {
+        tab.classList.remove("active");
+    });
+
+    button.classList.add("active");
+}
+
+
+
+// ===== IMAGE GALLERY =====
+
+function changeImage(villa, img) {
+
+    document.getElementById(`main-${villa}`).src = img.src;
+
+}
