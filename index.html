@@ -48,10 +48,17 @@
     <h2>Our Villas</h2>
 
     <div class="tabs">
-      <button class="tab active" onclick="showVilla('deluxe', this)">Deluxe</button>
-      <button class="tab" onclick="showVilla('standard', this)">Standard</button>
-      <button class="tab" onclick="showVilla('luxury1', this)">Luxury 1</button>
-      <button class="tab" onclick="showVilla('luxury2', this)">Luxury 2</button>
+      <button class="tab active" onclick="showVilla('standard', this)">Standard</button>
+      <button class="tab" onclick="showVilla('deluxe', this)">Deluxe</button>
+      <button class="tab" onclick="showVilla('Luxury -Sol-', this)">Luxury -Sol-</button>
+      <button class="tab" onclick="showVilla('Luxury -Luna', this)">Luxury -Luna-</button>
+    </div>
+
+
+    <!-- Standard -->
+    <div class="villa-content" id="standard">
+      <img id="main-standard" class="main-image" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688">
+      <p class="desc">Comfortable and simple design.</p>
     </div>
 
     <!-- Deluxe -->
@@ -63,23 +70,17 @@
         <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" onclick="changeImage('deluxe', this)">
       </div>
 
-      <p class="desc">A spacious villa with elegant interiors.</p>
-    </div>
-
-    <!-- Standard -->
-    <div class="villa-content" id="standard">
-      <img id="main-standard" class="main-image" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688">
-      <p class="desc">Comfortable and simple design.</p>
+      <p class="desc">A spacious villa with dining area.</p>
     </div>
 
     <!-- Luxury 1 -->
-    <div class="villa-content" id="luxury1">
+    <div class="villa-content" id="Luxury -Sol-">
       <img id="main-luxury1" class="main-image" src="https://images.unsplash.com/photo-1501183638710-841dd1904471">
       <p class="desc">Premium luxury villa experience.</p>
     </div>
 
     <!-- Luxury 2 -->
-    <div class="villa-content" id="luxury2">
+    <div class="villa-content" id="Luxury -Luna">
       <img id="main-luxury2" class="main-image" src="https://images.unsplash.com/photo-1523217582562-09d0def993a6">
       <p class="desc">Exclusive privacy and comfort.</p>
     </div>
