@@ -58,7 +58,18 @@ body {
   cursor: pointer;
 }
 
--section-
+.story-text {
+    max-width: 700px;
+    margin: 0 auto;
+
+    font-size: 1.2rem;
+    line-height: 2.2;
+
+    letter-spacing: 0.5px;
+
+    text-align: center;
+}
+
 section {
   padding: 120px 20px;
 }
