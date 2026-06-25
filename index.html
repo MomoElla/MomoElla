@@ -17,24 +17,23 @@
 <!-- ===== HEADER ===== -->
 <header class="header">
 
-  <div class="logo">Momo Ella</div>
-
   <button class="hamburger" onclick="toggleMenu()">
     ☰
   </button>
 
   <nav class="nav" id="navMenu">
-    <a onclick="showPage('home')">Home</a>
-    <a onclick="showPage('about')">About</a>
-    <a onclick="showPage('speciality')">Speciality</a>
-    <a onclick="showPage('gallery')">Gallery</a>
-    <a onclick="showPage('contact')">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#villas">Villas</a>
+    <a href="#speciality">Speciality</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
   </nav>
 
 </header>
 
 <!-- ===== HOME ===== -->
-<section id="home" class="page active">
+<section id="home">
 
   <div class="hero">
     <div class="hero-content">
@@ -44,7 +43,7 @@
   </div>
 
   <!-- Villas only in HOME -->
-  <section class="villas">
+ <section id="villas" class="villas">
 
     <h2>Our Villas</h2>
 
@@ -89,7 +88,7 @@
 </section>
 
 <!-- ===== ABOUT ===== -->
-<section id="about" class="page">
+<section id="about">
   <div class="page-inner">
     <h2>About</h2>
     <p>
@@ -100,7 +99,7 @@
 </section>
 
 <!-- ===== SPECIALITY ===== -->
-<section id="speciality" class="page">
+<section id="speciality">
   <div class="page-inner">
 
     <h2>Our Speciality</h2>
@@ -126,7 +125,7 @@
 </section>
 
 <!-- ===== GALLERY ===== -->
-<section id="gallery" class="page">
+<section id="gallery">
   <div class="page-inner">
     <h2>Gallery</h2>
     <p>Coming soon...</p>
@@ -134,13 +133,11 @@
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section id="contact" class="page">
-  <div class="page-inner">
+<section id="contact">
     <h2>Contact</h2>
     <p>Email: info@momoella.com</p>
     <p>Instagram: @momoellavillas</p>
     <p>Ella, Sri Lanka</p>
-  </div>
 </section>
 
 <script src="script.js"></script>
