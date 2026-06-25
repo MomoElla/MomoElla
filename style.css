@@ -58,16 +58,16 @@ body {
   cursor: pointer;
 }
 
-.story-text {
-    max-width: 650px;
-    margin: 0 auto;
-     color: #5f4a3d;
-}
 
-.story-text p {
+     
+.story-text {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
     line-height: 2.2;
     letter-spacing: 0.5px;
-    margin-bottom: 2rem;
+    color: #5f4a3d;
+    text-align: center;
 }
 
 section {
