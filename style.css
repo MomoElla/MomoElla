@@ -61,13 +61,13 @@ body {
 .story-text {
     max-width: 650px;
     margin: 0 auto;
+     color: #5f4a3d;
+}
 
-    font-size: 1.25rem;
-    line-height: 2.4;
-
-    letter-spacing: 0.8px;
-
-    color: #5f4a3d;
+.story-text p {
+    line-height: 2.2;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
 }
 
 section {
