@@ -356,5 +356,8 @@ h2 {
   .mobile-break{
     display:inline;
   }
+     .hero {
+    background-position: center;
+  }
 }
 }
