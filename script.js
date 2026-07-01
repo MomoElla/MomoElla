@@ -1,9 +1,11 @@
 // ===== HAMBURGER =====
 
 function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
-}
+  const nav = document.getElementById("navMenu");
+  if (!nav) return;
 
+  nav.classList.toggle("show");
+}
 
 // メニューを押したら自動で閉じる
 
