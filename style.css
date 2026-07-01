@@ -330,8 +330,12 @@ h2 {
     width: 80%;               /* カードっぽくする */
     max-width: 280px;
     text-align: center;
+      
   }
-
+.tab span{
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 2px;
+}
 }
 
 }
