@@ -314,11 +314,24 @@ h2 {
     width:100%;
   }
 
+    @media (max-width:768px){
+
   .tabs{
-    overflow-x:auto;
-    flex-wrap:nowrap;
-    justify-content:flex-start;
-    padding-bottom:10px;
+    display: flex;
+    flex-direction: column;   /* ←縦並び */
+    align-items: center;
+    gap: 12px;
+
+    overflow-x: visible;      /* ←横スクロール解除 */
+    flex-wrap: nowrap;        /* 念のため */
   }
+
+  .tab{
+    width: 80%;               /* カードっぽくする */
+    max-width: 280px;
+    text-align: center;
+  }
+
+}
 
 }
