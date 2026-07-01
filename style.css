@@ -25,9 +25,7 @@ body {
   font-family: 'Cormorant Garamond', serif;
   background: #f7f4ef;
   color: #4a3427;
-   .mobile-text {
-  display: none;
-}
+  
 }
  
 /* ===== HEADER ===== */
@@ -282,7 +280,11 @@ h2 {
   border-radius: 10px;
 }
 
+.mobile-text {
+  display: none;
+}
 /* ===== MOBILE ===== */
+
 @media (max-width:768px){
 
   .header{
@@ -353,10 +355,9 @@ h2 {
     text-align: center;
       
   }
-.mobile-text{
-  font-family: 'Cormorant Garamond', serif;
-  letter-spacing: 2px;
-}
-}
+         .mobile-text {
+    display: inline;
+  }
 
+}
 }
