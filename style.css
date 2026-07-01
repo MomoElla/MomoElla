@@ -47,18 +47,36 @@ body {
   z-index: 999;
 }
 
-.hamburger {
-  display: none;
-
-  font-size: 2rem;
-
-  border: none;
+.menu-icon {
   background: none;
-
+  border: none;
+  font-size: 24px;
   cursor: pointer;
+  display: inline-flex;
+  gap: 2px;
 }
 
+.menu-icon span {
+  display: inline-block;
+  animation: wave2 1.4s ease-in-out infinite;
+}
 
+.menu-icon span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.menu-icon span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes wave2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.menu-icon:hover {
+  animation-play-state: paused;
+}
      
 .story-text {
     max-width: 700px;
