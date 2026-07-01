@@ -265,48 +265,7 @@ h2 {
   border-radius: 10px;
 }
 
-.mobile-break {
-  display: none;
-}
-/* ===== MOBILE ===== */
-
-@media (max-width:768px){
-
-  .header{
-    justify-content:flex-end;
-    padding:20px;
-  }
-
-  .hamburger{
-    display:block;
-  }
-
-  .nav{
-    display:none;
-
-    position:absolute;
-
-    top:70px;
-    right:20px;
-
-    background:white;
-
-    padding:20px;
-
-    border-radius:15px;
-
-    flex-direction:column;
-
-    gap:15px;
-
-    box-shadow:0 5px 25px rgba(0,0,0,0.1);
-  }
-
-  .nav.show{
-    display:flex;
-  }
-
-  .hero h1{
+ .hero h1{
     font-size:2.8rem;
   }
 
@@ -321,29 +280,55 @@ h2 {
   .main-image{
     width:100%;
   }
+.mobile-break {
+  display: none;
+}
 
-    @media (max-width:768px){
+
+/* ===== MOBILE ===== */
+
+@media (max-width:768px){
+
+  .header{
+    justify-content:flex-end;
+    padding:20px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav{
+    display:none;
+    position:absolute;
+    top:70px;
+    right:20px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    flex-direction:column;
+    gap:15px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.1);
+  }
+
+  .nav.show{
+    display:flex;
+  }
 
   .tabs{
-    display: flex;
-    flex-direction: column;   /* ←縦並び */
-    align-items: center;
-    gap: 12px;
-
-    overflow-x: visible;      /* ←横スクロール解除 */
-    flex-wrap: nowrap;        /* 念のため */
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
   }
 
   .tab{
-    width: 80%;               /* カードっぽくする */
-    max-width: 280px;
-    text-align: center;
-      
-  }
-      .mobile-break {
-    display: inline;
-  }
+    width:80%;
+    max-width:280px;
+    text-align:center;
   }
 
+  .mobile-break{
+    display:inline;
+  }
 }
 }
