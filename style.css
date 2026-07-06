@@ -250,11 +250,11 @@ h2 {
 }
 
 .main-image {
-    width: 100%;
-    max-width: 1000px;
-    height: 650px;
-    object-fit: cover;
-    border-radius: 16px;
+  width: 100%;
+  max-width: 1000px;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
 .thumbnails {
@@ -367,6 +367,21 @@ h2 {
 
 @media (max-width:768px){
 
+      .main-image {
+    height: 300px;
+  }
+
+
+  .villa-title {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+}
+
   .header{
     justify-content:flex-end;
     padding:20px;
@@ -435,7 +450,4 @@ h2 {
     height: 220px;
   }
 
-}
-}
-}
 }
