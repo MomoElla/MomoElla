@@ -49,10 +49,11 @@ body {
   opacity: 0;
 
   /* フェード + ズーム */
-  transition: opacity 2s ease-in-out,
-              transform 3s ease-in-out;
+  transition:
+    opacity 1s ease-in-out,
+    transform 2s ease-out;
 
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 
