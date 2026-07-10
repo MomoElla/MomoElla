@@ -432,13 +432,20 @@ h2 {
      .hero {
     background-position: center;
   }
-    .experience-images {
-    grid-template-columns: 1fr;
-  }
+   @media (max-width:768px){
 
-  .experience-images img {
-    height: 220px;
-  }
+    .experience-hero{
+        height:260px;
+    }
+
+    .experience-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .experience-gallery img{
+        height:220px;
+    }
+
 .about {
     padding: 60px 0;
   }
