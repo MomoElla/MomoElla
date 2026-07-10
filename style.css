@@ -372,8 +372,8 @@ h2 {
 
 .main-image {
   width: 80%;
-  max-width: 900px;
-  height: 600px;
+  max-width: 800px;
+  height: auto;
   display: block;
   margin: 0 auto;
 }
