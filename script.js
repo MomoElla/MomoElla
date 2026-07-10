@@ -35,8 +35,27 @@ function showVilla(villaId, button) {
 }
 
 
-// ===== IMAGE CHANGE =====
+// ===== Hero IMAGE CHANGE =====
 
 function changeImage(villa, image) {
   document.getElementById(`main-${villa}`).src = image.src;
 }
+
+const images = document.querySelectorAll(".hero-img");
+
+let current = 0;
+
+
+setInterval(() => {
+
+  images[current].classList.remove("active");
+
+  current++;
+
+  if (current >= images.length) {
+    current = 0;
+  }
+
+  images[current].classList.add("active");
+
+}, 8000);
