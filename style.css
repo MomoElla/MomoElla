@@ -506,8 +506,6 @@ h2 {
     font-size: 2rem;
   }
 
-}
-
   .header{
     justify-content:flex-end;
     padding:20px;
@@ -552,7 +550,6 @@ h2 {
      .hero {
     background-position: center;
   }
-   @media (max-width:768px){
 
     .experience-hero{
         height:260px;
