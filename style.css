@@ -459,6 +459,9 @@ h2 {
     object-fit:cover;
     border-radius:16px;
 }
+.experience-block {
+  margin-bottom: 120px;
+}
 
 =======about=======
 .about {
