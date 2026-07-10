@@ -514,10 +514,22 @@ h2 {
 
 @media (max-width:768px){
 
-      .main-image {
-    height: 300px;
+       img {
+    max-width:100%;
+    height:auto;
   }
 
+  .main-image {
+    width:100%;
+    height:auto;
+  }
+
+
+  .experience-hero{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
 
   .villa-title {
     font-size: 1.8rem;
@@ -571,34 +583,38 @@ h2 {
      .hero {
     background-position: center;
   }
+    
+ .experience-gallery{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
 
-    .experience-hero{
-        height:260px;
-    }
 
-    .experience-gallery{
-        grid-template-columns:1fr;
-    }
+  .experience-gallery img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
 
-    .experience-gallery img{
-        height:220px;
-    }
 
 .about {
     padding: 60px 0;
   }
 
   .about-hero-image img {
-    height: 40vh;
+    width:100%;
+    height:auto;
+  }
+
+
+  .about-grid img {
+    width:100%;
+    height:auto;
   }
 
   .about-grid {
     grid-template-columns: 1fr;
     gap: 15px;
-  }
-
-  .about-grid img {
-    height: 220px;
   }
 
 }
