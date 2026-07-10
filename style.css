@@ -49,8 +49,8 @@ body {
   opacity: 0;
 
   /* フェード + ズーム */
-  transition: opacity 3s ease-in-out,
-              transform 5s ease-in-out;
+  transition: opacity 2s ease-in-out,
+              transform 3s ease-in-out;
 
   transform: scale(1.08);
 }
