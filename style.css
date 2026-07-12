@@ -57,11 +57,9 @@ section {
   justify-content: flex-end;
   align-items: center;
 
-  gap: 25px;
+  background: rgba(247,244,239,0.75);
 
-  background: rgba(247,244,239,0.95);
-
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 
   z-index: 999;
 
@@ -87,9 +85,13 @@ section {
 
   color: #6d5b43;
 
-  font-size: 22px;
+  font-family: 'Cormorant Garamond', serif;
 
-  font-weight: 500;
+  font-size: 20px;
+
+  font-weight: 300;
+
+  letter-spacing: 1px;
 
   transition: 0.3s;
 
@@ -98,14 +100,17 @@ section {
 
 .nav a:hover {
 
-  color: #b08d57;
+  color: #b08b63;
 
 }
-/* ===== BOOK NOW BUTTON ===== */
+
+
+/* ===== BOOK NOW ===== */
 
 .book-btn {
 
   display: flex;
+
   align-items: center;
 
   padding: 10px 25px;
@@ -134,41 +139,7 @@ section {
   transform: translateY(-2px);
 
 }
-
-/* ===== HAMBURGER BUTTON ===== */
-
-.menu-btn {
-
-  display: none;
-
-  background: none;
-
-  border: none;
-
-  cursor: pointer;
-
-  padding: 10px;
-
-}
-
-
-.menu-btn span {
-
-  display: block;
-
-  width: 34px;
-
-  height: 1px;
-
-  background: #6d5b43;
-
-  margin: 7px 0;
-
-  border-radius: 10px;
-
-}
-
-/* ===== .header-container {
+.header-container {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -176,6 +147,8 @@ section {
 
   padding: 20px 8%;
 }
+
+/* ===== 
 
 
 /* ===== Home section===== */
