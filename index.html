@@ -91,7 +91,7 @@
       </div>
 
      <p class="desc">Comfortable and simple design.</p>
-       <button onclick="sendWhatsApp('Standard')">　Book Now
+       <button onclick="sendWhatsApp('Standard')">　Book Now  
 </button>
     </div>
 
@@ -110,7 +110,7 @@
       </div>
 
       <p class="desc">A spacious villa with dining area.</p>
-      <button onclick="sendWhatsApp('Deluxe')">　Book Now
+      <button onclick="sendWhatsApp('Deluxe')">　Book Now  
 </button>
     </div>
 
@@ -131,7 +131,7 @@
          
       </div>
       <p class="desc">Premium luxury villa experience.</p>
-      <button onclick="sendWhatsApp('Luxury-Sol-')">　Book Now
+      <button onclick="sendWhatsApp('Luxury-Sol-')">　Book Now  
 </button>
     </div>
 
@@ -150,7 +150,7 @@
       
       </div>
       <p class="desc">Exclusive privacy and comfort.</p>
-      <button onclick="sendWhatsApp('Luxury-Luna-')">　Book Now
+      <button onclick="sendWhatsApp('Luxury-Luna-')">　Book Now  
 </button>
     </div>
 
@@ -478,6 +478,33 @@ Explore local shops, cafés, and Sri Lankan culture in the heart of Ella.
 
 
     <div class="contact-container">
+      <div class="booking-form">
+
+<label>Villa</label>
+<select id="villa">
+  <option value="Standard villa">Standard villa</option>
+  <option value="Deluxe villa">Deluxe villa</option>
+  <option value="Luxury villa">Luxury villa</option>
+</select>
+
+
+<label>Arrival</label>
+<input type="date" id="arrival">
+
+
+<label>Nights</label>
+<input type="number" id="nights" value="2">
+
+
+<label>Guests</label>
+<input type="number" id="guests" value="2">
+
+
+<button onclick="sendWhatsApp()">
+  Check your availability →
+</button>
+
+</div>
 
       <div class="contact-info">
 
