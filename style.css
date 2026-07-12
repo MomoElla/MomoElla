@@ -641,6 +641,58 @@ h2 {
   font-size: 15px;
 }
 
+footer {
+  padding: 50px 20px 80px; /* 下に余白を作る */
+  text-align: center;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  color: #b08b63;
+}
+
+
+.copyright {
+  margin-top: 40px;
+  font-size: 13px;
+  color: #b08b63;
+}
+
+
+/* Back to Top button */
+
+#topBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: none;
+
+  background-color: #c8a27a;
+  color: white;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  transition: 0.3s;
+}
+
+
+#topBtn:hover {
+  transform: translateY(-5px);
+  opacity: 0.8;
+}
+
 /* Tablet */
 
 @media (max-width: 900px) {
