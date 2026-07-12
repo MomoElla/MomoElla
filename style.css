@@ -895,9 +895,14 @@ footer {
 /* Mobile */
 
 @media (max-width: 600px) {
+  .nav{
+    display:none;
+  }
 
-  .nav.show {
+  .menu-btn{
     display:flex;
+  }
+
 }
 
   .gallery-section {
