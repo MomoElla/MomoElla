@@ -1,37 +1,176 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
-section {
-    padding: 180px 20px;
-}
-#about,
-#villas,
-#speciality,
-#gallery,
-#contact {
-    min-height: 80vh;
-}
+
 
 /* ===== RESET ===== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
+
+
 /* ===== BODY ===== */
+
 body {
   font-family: 'Cormorant Garamond', serif;
   background: #f7f4ef;
   color: #4a3427;
-  
+  overflow-x: hidden;
 }
+
+
+/* ===== SECTION ===== */
+
+section {
+  padding: 180px 20px;
+}
+
+
+#about,
+#villas,
+#experiences,
+#gallery,
+#contact {
+  min-height: 80vh;
+}
+
+
+/* ===== HEADER ===== */
+
+.header {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 30px 60px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 25px;
+
+  background: rgba(247,244,239,0.95);
+
+  backdrop-filter: blur(10px);
+
+  z-index: 999;
+
+}
+
+
+/* ===== NAVIGATION ===== */
+
+.nav {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+
+}
+
+
+.nav a {
+
+  text-decoration: none;
+
+  color: #6d5b43;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  transition: 0.3s;
+
+}
+
+
+.nav a:hover {
+
+  color: #b08d57;
+
+}
+/* ===== BOOK NOW BUTTON ===== */
+
+.book-btn {
+
+  background: #8b6f47;
+
+  color: white !important;
+
+  padding: 10px 25px;
+
+  border-radius: 30px;
+
+}
+
+
+.book-btn:hover {
+
+  background: #6d5434;
+
+}
+
+
+/* ===== HAMBURGER BUTTON ===== */
+
+.menu-btn {
+
+  display: none;
+
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+
+  padding: 10px;
+
+}
+
+
+.menu-btn span {
+
+  display: block;
+
+  width: 34px;
+
+  height: 1px;
+
+  background: #6d5b43;
+
+  margin: 7px 0;
+
+  border-radius: 10px;
+
+}
+
+
 
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+
+  padding: 20px 8%;
 }
 
 
@@ -97,57 +236,6 @@ body {
   inset:0;
   background: rgba(0,0,0,0.45);
   z-index:1;
-}
-
-/* ===== HEADER ===== */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-
-  padding: 30px 60px;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 25px;
-
-  background: rgba(247,244,239,0.95);
-  backdrop-filter: blur(10px);
-
-  z-index: 999;
-}
-
-
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 25px;
-
-  padding: 20px 8%;
-}
-/* ===== Hamburger ===== */
-
-
-.menu-btn { 
-    background: none; 
-    border: none; 
-    cursor: pointer; 
-    padding: 10px; }
-
-.menu-btn span {
-  display: block;
-  width: 34px;
-  height: 1px;
-  background: #333;
-  margin: 6px 0;
-  border-radius: 10px;
-}
-
-header {
-  background: transparent;
 }
 
 /* ===== About ===== */
@@ -682,28 +770,6 @@ h2 {
   background-color: #8f6b47;
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-.book-btn {
-  display: flex;
-  align-items: center;
-
-  padding: 10px 25px;
-  border-radius: 30px;
-
-  background-color: #b08b63;
-  color: white;
-
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 1px;
-
-  transition: 0.3s;
-}
-
-
-.book-btn:hover {
-  background-color: #8f6b47;
-  transform: translateY(-2px);
 }
 
 footer {
