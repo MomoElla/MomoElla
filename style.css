@@ -1,197 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
-
+section {
+    padding: 180px 20px;
+}
+#about,
+#villas,
+#speciality,
+#gallery,
+#contact {
+    min-height: 80vh;
+}
 
 /* ===== RESET ===== */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
-
-
 /* ===== BODY ===== */
-
 body {
   font-family: 'Cormorant Garamond', serif;
   background: #f7f4ef;
   color: #4a3427;
-  overflow-x: hidden;
+  
 }
-
-
-/* ===== SECTION ===== */
-
-section {
-  padding: 180px 20px;
-}
-
-
-#about,
-#villas,
-#experiences,
-#gallery,
-#contact {
-  min-height: 80vh;
-}
-
-
-/* ===== HEADER ===== */
-
-.header {
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width:100%;
-
-   padding:10px 50px;
-
-    background:rgba(247,244,239,0.55);
-
-    backdrop-filter:blur(8px);
-
-    z-index:999;
-
-}
-
-
-.header-inner {
-
-    display:flex;
-
-    justify-content:flex-end;
-
-    align-items:center;
-
-    width:100%;
-
-    gap:25px;
-
-}
-
-
-/* ===== NAV ===== */
-
-.nav {
-
-    display:flex;
-
-    align-items:center;
-
-    gap:28px;
-
-}
-
-
-.nav a {
-
-    text-decoration:none;
-
-    color:#6d5b43;
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:16px;
-
-    font-weight:300;
-
-    letter-spacing:1px;
-
-}
-
-
-/* ===== BOOK BUTTON ===== */
-
-.book-btn {
-
-    padding:9px 22px;
-
-    border-radius:30px;
-
-    background:#b08b63;
-
-    color:white !important;
-
-    font-size:14px !important;
-
-}
-
-
-/* ===== HAMBURGER ===== */
-
-.menu-btn {
-
-    display:none;
-
-    background:none;
-
-    border:none;
-
-    cursor:pointer;
-
-}
-
-
-.menu-btn span {
-
-    display:block;
-
-    width:25px;
-
-    height:1px;
-
-    background:#6d5b43;
-
-    margin:6px;
-
-}
-
-/* ===== 
-
-
-/* ===== Home section===== */
 
 .hero {
-
-    height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    position:relative;
-
-    overflow:hidden;
-
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
 
+/* 全画像を重ねる */
 .hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-    position:absolute;
+  width: 100%;
+  height: 100%;
 
-    width:92%;
+  object-fit: cover;
 
-    height:88%;
+  opacity: 0;
 
-    object-fit:cover;
+  /* フェード + ズーム */
+  transition:
+    opacity 1s ease-in-out,
+    transform 2s ease-out;
 
-    border-radius:20px;
-
-    opacity:0;
-
-    transition:opacity 1.5s ease;
-
+  transform: scale(1.06);
 }
+
 
 /* 表示中の画像 */
 .hero-img.active {
@@ -221,7 +85,7 @@ section {
 }
 
 .hero-content p {
-    max-width: 700px;
+    max-width: 750px;
     margin: 30px auto 0;
     line-height: 1.8;
     text-align: center;
@@ -230,11 +94,151 @@ section {
 .hero::before {
   content: "";
   position: absolute;
-  inset:0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0,0,0,0.45);
-  z-index:1;
 }
 
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 30px 60px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+
+  background: rgba(247,244,239,0.95);
+  backdrop-filter: blur(10px);
+
+  z-index: 999;
+}
+
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+
+  padding: 20px 8%;
+}
+/* ===== Hamburger ===== */
+
+
+.menu-btn { 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    padding: 10px; }
+
+.menu-btn span {
+  display: block;
+  width: 34px;
+  height: 1px;
+  background: #333;
+  margin: 6px 0;
+  border-radius: 10px;
+}
+
+header {
+  background: transparent;
+}
+
+/* ===== About ===== */
+.info-section {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  padding: 120px 8%;
+
+  align-items: center;
+
+}
+
+
+.info-image img {
+
+  width:100%;
+  height:650px;
+
+  object-fit:cover;
+
+  border-radius:0 40px 40px 0;
+
+}
+
+
+.info-content {
+
+  max-width:500px;
+
+}
+
+
+.number {
+
+  font-size:70px;
+  color:#d8d4cf;
+
+}
+
+
+.info-content h2 {
+
+  font-size:40px;
+  line-height:1.4;
+
+  margin:30px 0;
+
+}
+
+
+.info-content p {
+
+  font-size:18px;
+  line-height:2;
+
+}
+
+
+/* small photos */
+
+.gallery-small {
+
+ display:grid;
+
+ grid-template-columns:repeat(3,1fr);
+
+ gap:20px;
+
+ padding:0 8% 120px;
+
+}
+
+
+.gallery-small img {
+
+ width:100%;
+ height:180px;
+
+ object-fit:cover;
+
+}
+
+.info-section.reverse .info-image {
+  order:2;
+}
 
 .nav {
   display: flex;
@@ -266,121 +270,44 @@ section {
     text-align: center;
 }
 
-
 /* ===== HOME HERO ===== */
-/* ===== HOME / HERO ===== */
-
-#home {
-    height: 100vh;
-    padding: 0;
-}
-
-
 .hero {
-
-    position: relative;
-
-    width: 100%;
-    height: 100vh;
-
-    overflow: hidden;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
-
-/* Hero Images */
-
-.hero-img {
-
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    opacity: 0;
-
-    transition: opacity 1.5s ease;
-
-}
-
-
-.hero-img.active {
-
-    opacity: 1;
-
-}
-
-
-/* Dark overlay */
-
-.hero-overlay {
-
-    position: absolute;
-
-    inset: 0;
-
-    background: rgba(0,0,0,0.25);
-
-}
-
-
-/* Hero Text */
-
-.hero-content {
-
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 900px;
-
-    padding: 20px;
-
-    color: white;
-
-}
-
 
 .hero h1 {
+  font-size: 4rem;
+}
 
-    font-size: 4rem;
-
+h2 {
+    font-size: 3rem;
     font-weight: 400;
-
-    letter-spacing: 5px;
-
-    margin-bottom: 30px;
-
+    letter-spacing: 3px;
+    margin-bottom: 40px;
 }
+.villa-title{
+    margin-bottom:40px;
 
+    font-size:2.5rem;
+    font-weight:400;
 
+    letter-spacing:2px;
+}
 .hero p {
-
-    font-size: 1.2rem;
-
-    line-height: 1.8;
-
-    letter-spacing: 1px;
-
+  font-size: 1.2rem;
 }
 
+/* ===== VILLAS ===== */
+.villas {
+  padding: 100px 20px;
+  text-align: center;
+}
+/* ===== DELUXE | STANDARD | LUXURY I | LUXURY II ===== */
 /* ===== VILLA NAVIGATION ===== */
-
-.grid{
-    flex-direction:column;
-  }
-
-  .main-image{
-    width:100%;
-  }
 
 .tabs{
     display:flex;
@@ -490,95 +417,6 @@ section {
   cursor: pointer;
 }
 
-/* ===== About ===== */
-.info-section {
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 80px;
-
-  padding: 120px 8%;
-
-  align-items: center;
-
-}
-
-
-.info-image img {
-
-  width:100%;
-  height:650px;
-
-  object-fit:cover;
-
-  border-radius:0 40px 40px 0;
-
-}
-
-
-.info-content {
-
-  max-width:500px;
-
-}
-
-
-.number {
-
-  font-size:70px;
-  color:#d8d4cf;
-
-}
-
-
-.info-content h2 {
-
-  font-size:40px;
-  line-height:1.4;
-
-  margin:30px 0;
-
-}
-
-
-.info-content p {
-
-  font-size:18px;
-  line-height:2;
-
-}
-
-
-/* small photos */
-
-.gallery-small {
-
- display:grid;
-
- grid-template-columns:repeat(3,1fr);
-
- gap:20px;
-
- padding:0 8% 120px;
-
-}
-
-
-.gallery-small img {
-
- width:100%;
- height:180px;
-
- object-fit:cover;
-
-}
-
-.info-section.reverse .info-image {
-  order:2;
-}
-
-
 /* ===== SPECIALITY GRID ===== */
 .grid {
   display: flex;
@@ -593,6 +431,21 @@ section {
   border-radius: 10px;
 }
 
+ .hero h1{
+    font-size:2.8rem;
+  }
+
+  .hero p{
+    font-size:1rem;
+  }
+
+  .grid{
+    flex-direction:column;
+  }
+
+  .main-image{
+    width:100%;
+  }
 /* ===== Experience ===== */
 .experience-hero{
     width:100%;
@@ -629,6 +482,7 @@ section {
   margin-bottom: 120px;
 }
 
+=======about=======
 .about {
   padding: 120px 0;
 }
@@ -832,6 +686,28 @@ section {
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
+.book-btn {
+  display: flex;
+  align-items: center;
+
+  padding: 10px 25px;
+  border-radius: 30px;
+
+  background-color: #b08b63;
+  color: white;
+
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  transition: 0.3s;
+}
+
+
+.book-btn:hover {
+  background-color: #8f6b47;
+  transform: translateY(-2px);
+}
 
 footer {
   padding: 50px 20px 80px; /* 下に余白を作る */
@@ -892,22 +768,21 @@ footer {
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-   
+    .hamburger {
+    display: none;
+  }
 
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
 }
 
 /* Mobile */
 
 @media (max-width: 600px) {
-  .nav{
-    display:none;
-  }
-
-  .menu-btn{
-    display:flex;
-  }
-
-}
 
   .gallery-section {
     padding: 80px 5%;
