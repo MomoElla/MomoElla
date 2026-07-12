@@ -910,21 +910,17 @@ footer {
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-    .hamburger {
-    display: none;
-  }
+   
 
-}
-
-@media (min-width: 769px) {
-  .hamburger {
-    display: none;
-  }
 }
 
 /* Mobile */
 
 @media (max-width: 600px) {
+
+  .nav.show {
+    display:flex;
+}
 
   .gallery-section {
     padding: 80px 5%;
