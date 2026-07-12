@@ -103,25 +103,39 @@ section {
 }
 /* ===== BOOK NOW BUTTON ===== */
 
+/* ===== BOOK NOW BUTTON ===== */
+
 .book-btn {
 
-  background: #8b6f47;
-
-  color: white !important;
+  display: flex;
+  align-items: center;
 
   padding: 10px 25px;
 
   border-radius: 30px;
+
+  background-color: #b08b63;
+
+  color: white !important;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s;
 
 }
 
 
 .book-btn:hover {
 
-  background: #6d5434;
+  background-color: #8f6b47;
+
+  transform: translateY(-2px);
 
 }
-
 
 /* ===== HAMBURGER BUTTON ===== */
 
