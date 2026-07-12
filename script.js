@@ -1,87 +1,11 @@
 // ===== HAMBURGER =====
 
 function toggleMenu() {
-
   const nav = document.getElementById("navMenu");
-
   if (!nav) return;
 
   nav.classList.toggle("show");
-
 }
-
-
-
-// ===== HERO IMAGE SLIDE =====
-
-document.addEventListener("DOMContentLoaded", () => {
-
-
-  const images = document.querySelectorAll(".hero-img");
-
-
-  if (images.length === 0) return;
-
-
-  let current = 0;
-
-
-  setInterval(() => {
-
-
-    images[current].classList.remove("active");
-
-
-    current++;
-
-
-    if (current >= images.length) {
-
-      current = 0;
-
-    }
-
-
-    images[current].classList.add("active");
-
-
-  }, 4000);
-
-
-
-});
-
-
-
-
-// ===== CLOSE MENU AFTER CLICK =====
-
-document.addEventListener("DOMContentLoaded", () => {
-
-
-  document.querySelectorAll(".nav a").forEach(link => {
-
-
-    link.addEventListener("click", () => {
-
-
-      const nav = document.getElementById("navMenu");
-
-
-      if(nav){
-
-        nav.classList.remove("show");
-
-      }
-
-
-    });
-
-
-  });
-
-
-});
 
 // メニューを押したら自動で閉じる
 
@@ -111,6 +35,30 @@ function showVilla(villaId, button) {
 }
 
 
+// ===== Hero IMAGE CHANGE =====
+
+function changeImage(villa, image) {
+  document.getElementById(`main-${villa}`).src = image.src;
+}
+
+const images = document.querySelectorAll(".hero-img");
+
+let current = 0;
+
+
+setInterval(() => {
+
+  images[current].classList.remove("active");
+
+  current++;
+
+  if (current >= images.length) {
+    current = 0;
+  }
+
+  images[current].classList.add("active");
+
+}, 4000);
 
 // ===== Booking avilability check =====
 
