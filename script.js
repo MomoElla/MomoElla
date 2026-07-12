@@ -59,3 +59,27 @@ setInterval(() => {
   images[current].classList.add("active");
 
 }, 4000);
+
+// ===== Booking avilability check =====
+
+function sendWhatsApp(selectedVilla){
+
+  const arrival = document.getElementById("arrival").value;
+  const nights = document.getElementById("nights").value;
+  const guests = document.getElementById("guests").value;
+
+
+  const message =
+  `Hello, I'd love to book ${selectedVilla} from ${arrival} for ${nights} nights (${guests} guests). Are dates available?`;
+
+
+  const phone = "94771238820";
+
+
+  const url =
+  `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+
+
+  window.open(url, "_blank");
+
+}
