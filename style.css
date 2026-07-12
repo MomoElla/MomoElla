@@ -51,7 +51,7 @@ section {
 
     width:100%;
 
-    padding:20px 50px;
+    padding:20px 30px 20px 50px;
 
     background:rgba(247,244,239,0.75);
 
@@ -69,6 +69,8 @@ section {
     justify-content:flex-end;
 
     align-items:center;
+
+    width:100%;
 
     gap:25px;
 
@@ -149,14 +151,6 @@ section {
 
     margin:6px;
 
-}
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 25px;
-
-  padding: 20px 8%;
 }
 
 /* ===== 
