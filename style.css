@@ -610,6 +610,18 @@ h2 {
 
 }
 
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-contact p {
+  color: #8b6f47;
+  font-size: 14px;
+  margin: 0;
+}
 
 
 /* Mobile */
