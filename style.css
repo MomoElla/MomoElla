@@ -599,17 +599,22 @@ h2 {
   aspect-ratio: 2 / 1;
 }
 
-.footer-contact {
+.footer-icons {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
-.footer-contact p {
-  color: #8b6f47;
-  font-size: 14px;
-  margin: 0;
+.footer-icons a {
+  color: #b08b63;
+  font-size: 28px;
+  transition: 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #8f6b47;
+  transform: translateY(-4px);
 }
 
 
