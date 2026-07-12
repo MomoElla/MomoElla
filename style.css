@@ -647,6 +647,31 @@ h2 {
   font-size: 15px;
 }
 
+.booking-form button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+
+  background-color: #b08b63;
+  color: white;
+
+  border: none;
+  border-radius: 30px;
+
+  font-size: 16px;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.booking-form button:hover {
+  background-color: #8f6b47;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
 footer {
   padding: 50px 20px 80px; /* 下に余白を作る */
   text-align: center;
