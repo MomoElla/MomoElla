@@ -71,10 +71,8 @@ section {
 .nav {
 
   display: flex;
-
   align-items: center;
-
-  gap: 35px;
+  gap: 30px;
 
 }
 
@@ -87,11 +85,11 @@ section {
 
   font-family: 'Cormorant Garamond', serif;
 
-  font-size: 20px;
+  font-size: 16px;      /* 20px → 16px */
 
-  font-weight: 300;
+  font-weight: 300;     /* 細い文字 */
 
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 
   transition: 0.3s;
 
@@ -104,6 +102,40 @@ section {
 
 }
 
+/* ===== HAMBURGER ===== */
+
+.menu-btn {
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  background:none;
+
+  border:none;
+
+  cursor:pointer;
+
+  padding:10px;
+
+}
+
+
+.menu-btn span {
+
+  display:block;
+
+  width:28px;
+
+  height:1px;
+
+  background:#6d5b43;
+
+  margin:5px 0;
+
+}
 
 /* ===== BOOK NOW ===== */
 
