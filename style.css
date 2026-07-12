@@ -504,7 +504,9 @@ h2 {
   padding: 60px 10%;
 }
 
-.contact-info,
+.contact-info {
+  flex: 1.2;
+}
 .map {
   flex: 1;
 }
@@ -576,8 +578,6 @@ h2 {
 }
 
 
-
-/* & more */
 
 .gallery-more {
   text-align: center;
