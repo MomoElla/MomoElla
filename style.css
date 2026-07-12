@@ -720,23 +720,72 @@ h2 {
   }
 
 
-.about {
-    padding: 60px 0;
+.info-section {
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+    padding:60px 8%;
+
   }
 
-  .about-hero-image img {
-    width:100%;
+
+  .info-image img {
+
     height:auto;
+
+    border-radius:0 25px 25px 0;
+
   }
 
 
-  .about-grid img {
-    width:100%;
-    height:auto;
+  .info-content {
+
+    max-width:none;
+
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+
+  .number {
+
+    font-size:40px;
+
+  }
+
+
+  .info-content h2 {
+
+    font-size:28px;
+
+    margin:20px 0;
+
+  }
+
+
+  .info-content p {
+
+    font-size:15px;
+
+    line-height:1.8;
+
+  }
+
+
+  .gallery-small {
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+    padding:0 8% 60px;
+
+  }
+
+
+  .gallery-small img {
+
+    aspect-ratio:4/3;
+
   }
 }
