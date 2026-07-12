@@ -102,34 +102,31 @@ body {
 }
 
 /* ===== HEADER ===== */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+header {
+  background: transparent;
+}
 
-  padding: 30px 60px;
-
+.header-container {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
 
-  background: rgba(247,244,239,0.95);
-
-  backdrop-filter: blur(10px);
-
-  z-index: 999;
+  padding: 20px 8%;
 }
 /* ===== Hamburger ===== */
+
+
 .menu-btn {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 10px;
-}
 
-header {
-  background: transparent;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .menu-btn span {
@@ -137,8 +134,12 @@ header {
   width: 34px;
   height: 1px;
   background: #333;
-  margin: 7px 0;
+  margin: 6px 0;
   border-radius: 10px;
+}
+
+header {
+  background: transparent;
 }
 
 /* ===== About ===== */
@@ -229,17 +230,16 @@ header {
   order:2;
 }
 
-.nav {
+nav {
   display: flex;
-  gap: 35px;
+  align-items: center;
+  gap: 30px;
 }
 
-.nav a {
-  cursor: pointer;
+nav a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: #4a3427;
-  letter-spacing: 2px;
-  transition: 0.3s;
 }
 
 .nav a:hover {
@@ -672,14 +672,16 @@ h2 {
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 .book-btn {
-  background-color: #b08b63;
-  color: white;
+  display: flex;
+  align-items: center;
+
   padding: 10px 25px;
   border-radius: 30px;
+
+  background: #b08b63;
+  color: white;
+
   text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 1px;
-  transition: 0.3s;
 }
 
 .book-btn:hover {
@@ -746,7 +748,16 @@ footer {
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+    .hamburger {
+    display: none;
+  }
 
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
 }
 
 /* Mobile */
