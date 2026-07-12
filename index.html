@@ -91,8 +91,6 @@
       </div>
 
      <p class="desc">Comfortable and simple design.</p>
-       <button onclick="sendWhatsApp('Standard')">　Book Now  
-</button>
     </div>
 
 
@@ -110,8 +108,6 @@
       </div>
 
       <p class="desc">A spacious villa with dining area.</p>
-      <button onclick="sendWhatsApp('Deluxe')">　Book Now  
-</button>
     </div>
 
 
@@ -131,8 +127,6 @@
          
       </div>
       <p class="desc">Premium luxury villa experience.</p>
-      <button onclick="sendWhatsApp('Luxury-Sol-')">　Book Now  
-</button>
     </div>
 
     <!-- Luxury 2 -->
@@ -150,8 +144,6 @@
       
       </div>
       <p class="desc">Exclusive privacy and comfort.</p>
-      <button onclick="sendWhatsApp('Luxury-Luna-')">　Book Now  
-</button>
     </div>
 
   </section>
@@ -507,11 +499,7 @@ Explore local shops, cafés, and Sri Lankan culture in the heart of Ella.
 </button>
 
 </div>
-
-
-      </div>
-
-
+    
       <div class="map">
 
         <iframe 
@@ -547,29 +535,6 @@ Explore local shops, cafés, and Sri Lankan culture in the heart of Ella.
   </div>
 
 </section>
-
-
-<script>
-
-function sendWhatsApp(selectedVilla){
-
-  const arrival = document.getElementById("arrival").value;
-  const nights = document.getElementById("nights").value;
-  const guests = document.getElementById("guests").value;
-
-  const message =
-  `Hello, I'd love to book ${selectedVilla} from ${arrival} for ${nights} nights (${guests} guests). Are dates available?`;
-
-  const phone = "94771238820";
-
-  const url =
-  `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
-
-  window.open(url, "_blank");
-
-}
-
-</script>
 
 <script src="script.js"></script>
 
