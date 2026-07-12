@@ -84,6 +84,7 @@ function sendWhatsApp(){
   window.open(url, "_blank");
 
 }
+
 function scrollToTop(){
   window.scrollTo({
     top: 0,
