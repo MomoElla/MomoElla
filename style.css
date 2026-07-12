@@ -499,18 +499,18 @@ h2 {
 
 .contact-container {
   display: flex;
-  gap: 40px;
+  flex-direction: row;
+  gap: 50px;
   align-items: center;
   padding: 60px 10%;
 }
 
 .contact-info {
-  flex: 1.3;
+  flex: 1.2;
 }
 
 .map {
-  flex: 0.7;
-  max-width: 450px;
+  flex: 1;
 }
 
 .map iframe {
@@ -518,7 +518,6 @@ h2 {
   height: 350px;
   border-radius: 20px;
 }
-
 /* Gallery */
 
 .gallery-section {
