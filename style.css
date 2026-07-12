@@ -1,92 +1,959 @@
-// ===== HAMBURGER =====
-
-function toggleMenu() {
-  const nav = document.getElementById("navMenu");
-  if (!nav) return;
-
-  nav.classList.toggle("show");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+section {
+    padding: 180px 20px;
+}
+#about,
+#villas,
+#speciality,
+#gallery,
+#contact {
+    min-height: 80vh;
 }
 
-// メニューを押したら自動で閉じる
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-document.querySelectorAll(".nav a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.getElementById("navMenu").classList.remove("show");
-  });
-});
+html {
+  scroll-behavior: smooth;
+}
+/* ===== BODY ===== */
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background: #f7f4ef;
+  color: #4a3427;
+  
+}
 
-
-// ===== VILLA TABS =====
-
-function showVilla(villaId, button) {
-
-  document.querySelectorAll(".villa-content").forEach(villa => {
-    villa.classList.remove("active");
-  });
-
-  document.getElementById(villaId).classList.add("active");
-
-
-  document.querySelectorAll(".tab").forEach(tab => {
-    tab.classList.remove("active");
-  });
-
-  button.classList.add("active");
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
 
-// ===== Hero IMAGE CHANGE =====
+/* 全画像を重ねる */
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-function changeImage(villa, image) {
-  document.getElementById(`main-${villa}`).src = image.src;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  /* フェード + ズーム */
+  transition:
+    opacity 1s ease-in-out,
+    transform 2s ease-out;
+
+  transform: scale(1.06);
 }
 
-const images = document.querySelectorAll(".hero-img");
 
-let current = 0;
+/* 表示中の画像 */
+.hero-img.active {
+
+  opacity: 1;
+
+  /* ゆっくりズームアウト */
+  transform: scale(1);
+}
 
 
-setInterval(() => {
+/* 文字を前面へ */
+.hero-content {
+  position: relative;
+  z-index: 2;
 
-  images[current].classList.remove("active");
+  height: 100%;
 
-  current++;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  if (current >= images.length) {
-    current = 0;
+  text-align: center;
+
+  color: white;
+}
+
+.hero-content p {
+    max-width: 750px;
+    margin: 30px auto 0;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 30px 60px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+
+  background: rgba(247,244,239,0.95);
+  backdrop-filter: blur(10px);
+
+  z-index: 999;
+}
+
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+
+  padding: 20px 8%;
+}
+/* ===== Hamburger ===== */
+
+
+.menu-btn { 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    padding: 10px; }
+
+.menu-btn span {
+  display: block;
+  width: 34px;
+  height: 1px;
+  background: #333;
+  margin: 6px 0;
+  border-radius: 10px;
+}
+
+header {
+  background: transparent;
+}
+
+/* ===== About ===== */
+.info-section {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  padding: 120px 8%;
+
+  align-items: center;
+
+}
+
+
+.info-image img {
+
+  width:100%;
+  height:650px;
+
+  object-fit:cover;
+
+  border-radius:0 40px 40px 0;
+
+}
+
+
+.info-content {
+
+  max-width:500px;
+
+}
+
+
+.number {
+
+  font-size:70px;
+  color:#d8d4cf;
+
+}
+
+
+.info-content h2 {
+
+  font-size:40px;
+  line-height:1.4;
+
+  margin:30px 0;
+
+}
+
+
+.info-content p {
+
+  font-size:18px;
+  line-height:2;
+
+}
+
+
+/* small photos */
+
+.gallery-small {
+
+ display:grid;
+
+ grid-template-columns:repeat(3,1fr);
+
+ gap:20px;
+
+ padding:0 8% 120px;
+
+}
+
+
+.gallery-small img {
+
+ width:100%;
+ height:180px;
+
+ object-fit:cover;
+
+}
+
+.info-section.reverse .info-image {
+  order:2;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.nav a {
+  cursor: pointer;
+  text-decoration: none;
+
+  color: #4a3427;
+  letter-spacing: 2px;
+
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  opacity: 0.5;
+}
+
+/* ===== PAGE が広がりすぎないように ===== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ===== HOME HERO ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+.villa-title{
+    margin-bottom:40px;
+
+    font-size:2.5rem;
+    font-weight:400;
+
+    letter-spacing:2px;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* ===== VILLAS ===== */
+.villas {
+  padding: 100px 20px;
+  text-align: center;
+}
+/* ===== DELUXE | STANDARD | LUXURY I | LUXURY II ===== */
+/* ===== VILLA NAVIGATION ===== */
+
+.tabs{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:70px 0;
+
+    gap:0;
+}
+
+.tabs button{
+    appearance:none;
+    -webkit-appearance:none;
+}
+
+.tab{
+    background:none;
+    border:none;
+
+    position:relative;
+
+    padding:0 35px 12px;
+
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.2rem;
+
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    color:#9a8a80;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
+}
+
+.tab:hover{
+    color:#4a3427;
+}
+
+.tab:not(:last-child)::after{
+    content:"";
+
+    position:absolute;
+
+    right:0;
+    top:25%;
+
+    width:1px;
+    height:50%;
+
+    background:rgba(74,52,39,.15);
+}
+
+.tab.active{
+    color:#4a3427;
+}
+
+.tab.active::before{
+    content:"";
+
+    position:absolute;
+
+    left:35px;
+    right:35px;
+    bottom:0;
+
+    height:1px;
+
+    background:#4a3427;
+}
+
+.villa-content {
+  display: none;
+}
+
+.villa-content.active {
+  display: block;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.thumbnails {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.thumbnails img {
+  width: 90px;
+  height: 70px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+/* ===== SPECIALITY GRID ===== */
+.grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.grid div {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+ .hero h1{
+    font-size:2.8rem;
   }
 
-  images[current].classList.add("active");
+  .hero p{
+    font-size:1rem;
+  }
 
-}, 4000);
+  .grid{
+    flex-direction:column;
+  }
 
-// ===== Booking avilability check =====
+  .main-image{
+    width:100%;
+  }
+/* ===== Experience ===== */
+.experience-hero{
+    width:100%;
+    max-width:900px;
+    height:420px;
+    object-fit:cover;
+    border-radius:20px;
+    display:block;
+    margin:35px auto;
+}
 
-function sendWhatsApp(){
+.experience-text{
+    max-width:700px;
+    margin:0 auto 35px;
+    text-align:center;
+    line-height:2;
+}
 
-  const villa = document.getElementById("villa").value;
-  const arrival = document.getElementById("arrival").value;
-  const nights = document.getElementById("nights").value;
-  const guests = document.getElementById("guests").value;
+.experience-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.experience-gallery img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:16px;
+}
+.experience-block {
+  margin-bottom: 120px;
+}
+
+=======about=======
+.about {
+  padding: 120px 0;
+}
+
+.about-section {
+  margin-bottom: 120px;
+}
+
+/* Big editorial image */
+.about-hero-image img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  margin: 30px 0;
+}
+
+/* clean image row */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.about-grid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  padding: 60px 10%;
+}
+
+.contact-info {
+  flex: 1.2;
+}
+
+.map {
+  flex: 1;
+}
+
+.map iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+}
+/* Gallery */
+
+.gallery-section {
+  padding: 120px 8%;
+  background: #f7f3eb;
+}
 
 
-  const message = 
-  `Hello, I'd love to book ${villa} from ${arrival} for ${nights} nights (${guests} guests). Are dates available?`;
+.gallery-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
 
 
-  const phone = "94771238820";
+.gallery-header h2 {
+  font-family: serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #3f4638;
+  margin-bottom: 15px;
+}
 
 
-  const url = 
-  `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+.gallery-header p {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #6b7061;
+}
 
 
-  window.open(url, "_blank");
+/* Grid */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+
+.gallery-item {
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+
+/* Hover */
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+
+
+.gallery-more {
+  text-align: center;
+  margin-top: 70px;
+}
+
+
+.gallery-more span {
+  font-family: serif;
+  font-size: 28px;
+  color: #3f4638;
+  letter-spacing: 2px;
+}
+
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(8),
+.gallery-item:nth-child(15) {
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-icons a {
+  color: #b08b63;
+  font-size: 28px;
+  transition: 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #8f6b47;
+  transform: translateY(-4px);
+}
+
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+.booking-form label {
+  margin-bottom: -8px;
+  font-size: 14px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.booking-form input,
+.booking-form select {
+  border: 1px solid #d8c3a5;
+  border-radius: 8px;
+  background: #fffaf3;
+  font-size: 15px;
+}
+
+.booking-form button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+
+  background-color: #b08b63;
+  color: white;
+
+  border: none;
+  border-radius: 30px;
+
+  font-size: 16px;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.booking-form button:hover {
+  background-color: #8f6b47;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+.book-btn {
+  display: flex;
+  align-items: center;
+
+  padding: 10px 25px;
+  border-radius: 30px;
+
+  background-color: #b08b63;
+  color: white;
+
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  transition: 0.3s;
+}
+
+
+.book-btn:hover {
+  background-color: #8f6b47;
+  transform: translateY(-2px);
+}
+
+footer {
+  padding: 50px 20px 80px; /* 下に余白を作る */
+  text-align: center;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  color: #b08b63;
+}
+
+
+.copyright {
+  margin-top: 40px;
+  font-size: 13px;
+  color: #b08b63;
+}
+
+
+/* Back to Top button */
+
+#topBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: none;
+
+  background-color: #c8a27a;
+  color: white;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  transition: 0.3s;
+}
+
+
+#topBtn:hover {
+  transform: translateY(-5px);
+  opacity: 0.8;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+    .hamburger {
+    display: none;
+  }
 
 }
-function scrollToTop(){
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .gallery-section {
+    padding: 80px 5%;
+  }
+
+
+  .gallery-header h2 {
+    font-size: 36px;
+  }
+
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+
+  .gallery-more span {
+    font-size: 24px;
+  }
+
+
+       img {
+    max-width:100%;
+    height:auto;
+  }
+
+  .main-image {
+    width:100%;
+    height:auto;
+  }
+
+
+  .experience-hero{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+
+  .villa-title {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .header{
+    justify-content:flex-end;
+    padding:20px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav{
+    display:none;
+    position:absolute;
+    top:70px;
+    right:20px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    flex-direction:column;
+    gap:15px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.1);
+  }
+
+  .nav.show{
+    display:flex;
+  }
+
+  .tabs{
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+  }
+
+  .tab{
+    width:80%;
+    max-width:280px;
+    text-align:center;
+  }
+
+  .mobile-break{
+    display:inline;
+  }
+     .hero {
+    background-position: center;
+  }
+    
+ .experience-gallery{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+
+  .experience-gallery img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+
+
+.info-section {
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+    padding:60px 8%;
+
+  }
+
+
+  .info-image img {
+
+    height:auto;
+
+    border-radius:0 25px 25px 0;
+
+  }
+
+
+  .info-content {
+
+    max-width:none;
+
+  }
+
+
+  .number {
+
+    font-size:40px;
+
+  }
+
+
+  .info-content h2 {
+
+    font-size:28px;
+
+    margin:20px 0;
+
+  }
+
+
+  .info-content p {
+
+    font-size:15px;
+
+    line-height:1.8;
+
+  }
+
+
+  .gallery-small {
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+    padding:0 8% 60px;
+
+  }
+
+
+  .gallery-small img {
+
+    aspect-ratio:4/3;
+
+  }
 }
