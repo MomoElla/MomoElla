@@ -84,7 +84,7 @@ const villaImages = {
 
 
   "luxury-sol":[
-    "images/LuxurySOL/sol6.jpg",
+    "images/LuxurySOL/sol16.jpg",
     "images/LuxurySOL/sol12.jpg",
     "images/LuxurySOL/sol8.jpg",
     "images/LuxurySOL/sol14.jpg",
