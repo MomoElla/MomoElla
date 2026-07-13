@@ -140,7 +140,23 @@ header {
   margin: 7px 0;
   border-radius: 10px;
 }
+.book-btn{
+    background:#b08b63;
+    color:white !important;
 
+    padding:12px 26px;
+    border-radius:999px;
+
+    text-decoration:none;
+    letter-spacing:2px;
+
+    transition:.3s;
+}
+
+.book-btn:hover{
+    background:#98734f;
+    transform:translateY(-2px);
+}
 /* ===== About ===== */
 .info-section {
 
@@ -229,9 +245,10 @@ header {
   order:2;
 }
 
-.nav {
-  display: flex;
-  gap: 35px;
+.nav{
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
 .nav a {
@@ -796,7 +813,14 @@ footer {
     max-width:280px;
     text-align:center;
   }
+    
+.book-btn{
+    display:block;
+    text-align:center;
+    margin-top:10px;
+}
 
+}
   .mobile-break{
     display:inline;
   }
