@@ -896,15 +896,10 @@ footer {
     object-fit:contain;
   }
 
-
-.info-section {
-
-    grid-template-columns:1fr;
-
-    gap:40px;
-
-    padding:60px 8%;
-
+ .info-section {
+    grid-template-columns:1fr !important;
+    gap:40px !important;
+    padding:60px 8% !important;
   }
 
 
@@ -965,22 +960,4 @@ footer {
     aspect-ratio:4/3;
 
   }
-}
-/* TEST ABOUT */
-
-.info-section {
-  display:grid !important;
-  grid-template-columns:1fr 1fr !important;
-  gap:80px !important;
-  padding:120px 8% !important;
-}
-
-.info-image img {
-  width:100%;
-  height:650px;
-  object-fit:cover;
-}
-
-.info-content {
-  max-width:500px;
 }
