@@ -77,17 +77,39 @@
 
 
     <!-- Standard -->
-    <div class="villa-content active" id="standard">
-      <img id="main-standard" class="main-image" src="images/Standard/stn1.jpg">
-  <!-- More photos -->   
-     <div class="thumbnails">
-        <img src="images/Standard/stn10.jpg" onclick="changeImage('standard', this)">
-        <img src="images/Standard/stn11.jpg" onclick="changeImage('standard', this)">
-        <img src="images/Standard/stn9.jpg" onclick="changeImage('standard', this)">
-        <img src="images/Standard/stn4.jpg" onclick="changeImage('standard', this)">
-        <img src="images/Standard/stn3.jpg" onclick="changeImage('standard', this)">
-        <img src="images/Standard/stn8.jpg" onclick="changeImage('standard', this)">
-      </div>
+  <div class="villa-content active" id="standard">
+
+  <div class="main-image-wrapper">
+
+    <button class="slider-btn prev" onclick="prevImage('standard')">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+
+    <img id="main-standard" 
+         class="main-image" 
+         src="images/Standard/stn1.jpg">
+
+
+    <button class="slider-btn next" onclick="nextImage('standard')">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+  </div>
+
+
+  <div class="thumbnails">
+
+    <img src="images/Standard/stn10.jpg" onclick="changeImage('standard', this)">
+    <img src="images/Standard/stn11.jpg" onclick="changeImage('standard', this)">
+    <img src="images/Standard/stn9.jpg" onclick="changeImage('standard', this)">
+    <img src="images/Standard/stn4.jpg" onclick="changeImage('standard', this)">
+    <img src="images/Standard/stn3.jpg" onclick="changeImage('standard', this)">
+    <img src="images/Standard/stn8.jpg" onclick="changeImage('standard', this)">
+
+  </div>
+
+</div>
 
      <p class="desc">Comfortable and simple design.</p>
     </div>
