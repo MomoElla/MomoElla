@@ -70,13 +70,51 @@ const villaImages = {
     "images/Standard/stn4.jpg",
     "images/Standard/stn3.jpg",
     "images/Standard/stn8.jpg"
-  ]
+  ],
+
+  deluxe:[
+    "images/Deluxe/DX13.jpg",
+    "images/Deluxe/DX12.jpg",
+    "images/Deluxe/DX4.jpg",
+    "images/Deluxe/DX14.jpg",
+    "images/Deluxe/DX3.jpg",
+    "images/Deluxe/DX2.jpg",
+    "images/Deluxe/DX7.jpg"
+  ],
+
+
+  "luxury-sol":[
+    "images/LuxurySOL/sol6.jpg",
+    "images/LuxurySOL/sol12.jpg",
+    "images/LuxurySOL/sol8.jpg",
+    "images/LuxurySOL/sol14.jpg",
+    "images/LuxurySOL/sol17.jpg",
+    "images/LuxurySOL/sol18.jpg"
+  ],
+
+  "luxury-luna":[
+
+  "images/Hero/Hero11.jpg",
+  "images/LuxuryLUNA/luna10.jpg",
+  "images/LuxuryLUNA/luna12.jpg",
+  "images/LuxuryLUNA/luna8.jpg",
+  "images/LuxuryLUNA/luna7.jpg",
+  "images/LuxuryLUNA/luna15.jpg",
+  "images/LuxuryLUNA/luna14.jpg"
+
+]
 
 };
 
 
 let currentIndex = {
-  standard:0
+  standard:0,
+
+  deluxe:0,
+
+  "luxury-sol":0,
+
+  "luxury-luna":0
 };
 
 
