@@ -60,6 +60,54 @@ setInterval(() => {
 
 }, 4000);
 
+const villaImages = {
+
+  standard:[
+    "images/Standard/stn1.jpg",
+    "images/Standard/stn10.jpg",
+    "images/Standard/stn11.jpg",
+    "images/Standard/stn9.jpg",
+    "images/Standard/stn4.jpg",
+    "images/Standard/stn3.jpg",
+    "images/Standard/stn8.jpg"
+  ]
+
+};
+
+
+let currentIndex = {
+  standard:0
+};
+
+
+function nextImage(villa){
+
+  currentIndex[villa]++;
+
+  if(currentIndex[villa] >= villaImages[villa].length){
+    currentIndex[villa]=0;
+  }
+
+  document.getElementById("main-"+villa).src =
+  villaImages[villa][currentIndex[villa]];
+
+}
+
+
+
+function prevImage(villa){
+
+  currentIndex[villa]--;
+
+  if(currentIndex[villa] < 0){
+    currentIndex[villa]=villaImages[villa].length-1;
+  }
+
+  document.getElementById("main-"+villa).src =
+  villaImages[villa][currentIndex[villa]];
+
+}
+
 // ===== Booking avilability check =====
 
 function sendWhatsApp(){
