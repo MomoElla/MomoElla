@@ -944,20 +944,36 @@ footer {
   }
 
 
-  .gallery-small {
+ .gallery-small {
 
-    grid-template-columns:repeat(3,1fr);
-
-    gap:10px;
+    display:flex;
+    overflow-x:auto;
+    gap:15px;
 
     padding:0 8% 60px;
+
+    scroll-snap-type:x mandatory;
 
   }
 
 
   .gallery-small img {
 
-    aspect-ratio:4/3;
+    flex:0 0 85%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    scroll-snap-align:start;
 
   }
+
+  /* スクロールバーを隠す */
+  .gallery-small::-webkit-scrollbar {
+    display:none;
+  }
+
 }
