@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
-section {
-    padding: 180px 20px;
-}
+
 #about,
 #villas,
 #speciality,
@@ -484,7 +482,7 @@ h2 {
   margin-bottom: 120px;
 }
 
-=======about=======
+/* ========about=======　*/
 .about {
   padding: 120px 0;
 }
