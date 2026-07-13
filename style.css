@@ -1030,4 +1030,77 @@ footer {
     display:none;
   }
 
+     /* Villa image slider */
+
+  .main-image-wrapper{
+
+    position:relative;
+
+    width:100%;
+
+    touch-action:pan-y;
+
+  }
+
+
+  .main-image{
+
+    width:100%;
+
+    height:auto;
+
+    object-fit:cover;
+
+  }
+
+
+  /* Hide thumbnails on mobile */
+
+  .thumbnails{
+
+    display:none;
+
+  }
+
+
+  /* Slider arrows */
+
+  .slider-btn{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:rgba(255,255,255,0.85);
+
+    color:#4a3427;
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    z-index:5;
+
+  }
+
+
+  .slider-btn.prev{
+
+    left:15px;
+
+  }
+
+
+  .slider-btn.next{
+
+    right:15px;
+
+  }
+
 }
