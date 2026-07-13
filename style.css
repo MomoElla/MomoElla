@@ -417,6 +417,56 @@ h2 {
   cursor: pointer;
 }
 
+.main-image-wrapper{
+  position:relative;
+  max-width:900px;
+  margin:auto;
+}
+
+
+.slider-btn{
+
+  position:absolute;
+
+  top:50%;
+  transform:translateY(-50%);
+
+  width:45px;
+  height:45px;
+
+  border-radius:50%;
+
+  border:none;
+
+  background:rgba(255,255,255,0.85);
+
+  color:#4a3427;
+
+  cursor:pointer;
+
+  z-index:5;
+
+}
+
+
+.slider-btn:hover{
+
+  background:#b08b63;
+
+  color:white;
+
+}
+
+
+.prev{
+  left:20px;
+}
+
+
+.next{
+  right:20px;
+}
+
 /* ===== SPECIALITY GRID ===== */
 .grid {
   display: flex;
@@ -812,6 +862,10 @@ footer {
     height:auto;
   }
 
+.thumbnails{
+  display:none;
+}
+    
   .main-image {
     width:100%;
     height:auto;
