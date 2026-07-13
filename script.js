@@ -113,9 +113,9 @@ let currentIndex = {
 
   deluxe:0,
 
-  "luxury-sol":0,
+  luxury-sol:0,
 
-  "luxury-luna":0
+  luxury-luna:0
 };
 
 
