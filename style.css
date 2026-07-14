@@ -1163,12 +1163,14 @@ footer {
 
   }
      .hero {
-    height: 70vh;
+    height: auto;
+    background: #f8f5ef; /* 周りの余白の色 */
   }
 
   .hero-img {
-    height:100%;
-    object-fit:cover;
+    width:100%;
+    height:auto;
+    object-fit:contain;
   }
 
 }
