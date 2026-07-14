@@ -723,27 +723,19 @@ h2 {
   aspect-ratio: 2 / 1;
 }
 
-.footer-icons {
-  display: flex;
-  justify-content: center;
-  gap: 35px;
-  padding: 30px 0;
+.footer-icons a {
+  color: #9b7355 !important;
+  text-decoration: none !important;
 }
 
-.footer-icons a {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.footer-icons a:visited {
+  color: #9b7355 !important;
 }
 
 .footer-icons a:hover {
-  color: #c08b63;
-  transform: translateY(-3px);
+  color: #c49a6c !important;
+  text-decoration: none !important;
 }
-
 .footer-icons i {
   font-size: 28px;
 }
