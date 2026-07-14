@@ -176,28 +176,16 @@ header {
 
 
 .info-image img {
-
-  width:100%;
-  height:650px;
-
-  object-fit:cover;
-
-  border-radius:20px;
-
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    border-radius:20px;
 }
 
 
 .info-content {
 
   max-width:500px;
-
-}
-
-
-.number {
-
-  font-size:70px;
-  color:#d8d4cf;
 
 }
 
