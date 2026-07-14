@@ -723,6 +723,12 @@ h2 {
   aspect-ratio: 2 / 1;
 }
 
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
 .footer-icons a {
   color: #9b7355 !important;
   text-decoration: none !important;
