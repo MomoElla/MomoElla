@@ -570,6 +570,21 @@ h2 {
   line-height: 2;
   color: #6b5a45;
 }
+/* Access Gallery - PC */
+
+.access-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.access-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 .booking-form {
   max-width: 500px;
@@ -1089,7 +1104,31 @@ footer {
   .gallery-small::-webkit-scrollbar {
     display:none;
   }
+/* access iamge gallery */
+    
+    .access-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    margin-top: 25px;
+  }
 
+
+  .access-gallery img {
+    flex: 0 0 85%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    scroll-snap-align: center;
+  }
+
+
+  /* スクロールバーを消す */
+  .access-gallery::-webkit-scrollbar {
+    display:none;
+  }
      /* Villa image slider */
 
   .main-image-wrapper{
