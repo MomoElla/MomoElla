@@ -861,26 +861,64 @@ footer {
 
 @media (max-width: 600px) {
 
-  .gallery-section {
-    padding: 80px 5%;
-  }
+ @media (max-width:600px){
 
+  .gallery-section {
+    padding:80px 5%;
+  }
 
   .gallery-header h2 {
-    font-size: 36px;
+    font-size:36px;
   }
 
 
+  /* Mobile Gallery Slider */
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    display:flex;
+    overflow-x:auto;
+    gap:20px;
+
+    scroll-snap-type:x mandatory;
+
+    padding-bottom:10px;
+  }
+
+
+  .gallery-item {
+    flex:0 0 85%;
+
+    aspect-ratio:4 / 5;
+
+    scroll-snap-align:start;
+
+    border-radius:20px;
+    overflow:hidden;
+  }
+
+
+  .gallery-item img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+
+  /* スクロールバーを消す */
+  .gallery-grid::-webkit-scrollbar {
+    display:none;
   }
 
 
   .gallery-more span {
-    font-size: 24px;
+    font-size:24px;
   }
 
+     .gallery-item:nth-child(1),
+.gallery-item:nth-child(8),
+.gallery-item:nth-child(15) {
+  grid-column:auto;
+  aspect-ratio:4 / 5;
+}
 
        img {
     max-width:100%;
