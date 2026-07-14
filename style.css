@@ -731,9 +731,13 @@ h2 {
 }
 
 .footer-icons a {
-  color: #b08b63;
-  font-size: 28px;
-  transition: 0.3s;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.footer-icons i {
+  text-decoration: none;
 }
 
 .footer-icons a:hover {
