@@ -219,6 +219,8 @@ header {
  gap:20px;
 
  padding:0 8% 120px;
+    
+border-radius:20px;
 
 }
 
@@ -1015,7 +1017,7 @@ footer {
 
     height:auto;
 
-    border-radius:0 25px 25px 0;
+   border-radius:20px;
 
   }
 
