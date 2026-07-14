@@ -726,23 +726,26 @@ h2 {
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-bottom: 30px;
+  gap: 35px;
+  padding: 30px 0;
 }
 
 .footer-icons a {
-  text-decoration: none;
-  border: none;
-  outline: none;
-}
-
-.footer-icons i {
-  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-icons a:hover {
-  color: #8f6b47;
-  transform: translateY(-4px);
+  color: #c08b63;
+  transform: translateY(-3px);
+}
+
+.footer-icons i {
+  font-size: 28px;
 }
 
 
