@@ -822,6 +822,10 @@ footer {
   opacity: 0.8;
 }
 
+.mobile-break{
+    display:none;
+}
+
 /* Tablet */
 
 @media (max-width: 900px) {
@@ -830,7 +834,6 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-}
 
 /* Mobile */
 
