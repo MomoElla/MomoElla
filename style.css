@@ -1071,19 +1071,31 @@ footer {
 
 
   .gallery-small {
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:10px;
-    margin:25px 0 50px;
+
+    display:flex;
+    overflow-x:auto;
+    gap:15px;
+
+    padding:0 8% 60px;
+
+    scroll-snap-type:x mandatory;
+
   }
+
 
   .gallery-small img {
-    width:100%;
-    height:100px;
-    object-fit:cover;
-    border-radius:8px;
-  }
 
+    flex:0 0 85%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    scroll-snap-align:start;
+
+  }
 
   /* スクロールバーを隠す */
   .gallery-small::-webkit-scrollbar {
