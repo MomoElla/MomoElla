@@ -531,7 +531,7 @@ h2 {
     width:100%;
     height:180px;
     object-fit:cover;
-    border-radius:20px;
+    border-radius:10px;
     display:block;
 }
 .experience-block {
@@ -867,8 +867,6 @@ footer {
 
 @media (max-width: 600px) {
 
- @media (max-width:600px){
-
   .gallery-section {
     padding:80px 5%;
   }
@@ -876,7 +874,6 @@ footer {
   .gallery-header h2 {
     font-size:36px;
   }
-
 
   /* Mobile Gallery Slider */
   .gallery-grid {
@@ -1012,12 +1009,12 @@ footer {
     gap:20px;
   }
 
-
-  .experience-gallery img{
+ .experience-gallery img{
     width:100%;
-    height:auto;
-    object-fit:contain;
-  }
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
 
  .info-section {
     grid-template-columns:1fr !important;
