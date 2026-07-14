@@ -740,6 +740,21 @@ h2 {
   font-size: 28px;
 }
 
+.footer-icons a,
+.footer-icons a:link,
+.footer-icons a:visited,
+.footer-icons a:hover,
+.footer-icons a:active {
+    color:#9b7355 !important;
+    text-decoration:none !important;
+    border:none !important;
+    outline:none;
+}
+
+.footer-icons i {
+    display:inline-block;
+    font-size:28px;
+}
 
 .booking-form {
   display: flex;
