@@ -531,7 +531,8 @@ h2 {
     width:100%;
     height:180px;
     object-fit:cover;
-    border-radius:16px;
+    border-radius:20px;
+    display:block;
 }
 .experience-block {
   margin-bottom: 120px;
