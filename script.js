@@ -158,7 +158,7 @@ function sendWhatsApp(){
 
 
   const message = 
-  `Hello, I'd love to book ${villa} from ${arrival} for ${nights} nights (${guests} guests). Are dates available?`;
+  `Hello, I'd love to plan our stay at ${villa} from ${arrival} for ${nights} nights (${guests} guests). Are dates available?`;
 
 
   const phone = "94771238820";
