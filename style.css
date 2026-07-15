@@ -1192,19 +1192,19 @@ footer {
 
   /* About / Villas / Experienceなど */
   .info-section {
-    padding: 35px 20px;
+    padding: 35px 20px !important;
   }
 
 
   /* Galleryの余白 */
   .gallery-small,
   .thumbnails {
-    margin-bottom: 35px;
+    margin-bottom: 35px !important;
   }
 
 
   /* Accessなど */
   #access {
-    padding: 35px 20px;
+    padding: 35px 20px !important;
   }
 }
