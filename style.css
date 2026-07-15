@@ -1212,10 +1212,7 @@ footer {
     padding: 35px 20px !important;
   }
      #about {
-    padding-bottom: 15px;
-  }
-
-  #about + .gallery-small {
-    margin-top: 10px;
-  }
+    min-height: auto　!important;
+    padding: 30px 20px　!important;
+}
 }
