@@ -1122,15 +1122,6 @@ footer {
   }
 
 
-  /* Hide thumbnails on mobile */
-
-  .thumbnails{
-
-    display:none;
-
-  }
-
-
   /* Slider arrows */
 
   .slider-btn{
