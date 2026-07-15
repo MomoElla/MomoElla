@@ -176,10 +176,11 @@ details summary:hover {
 }
 
 .story-end {
-  margin-top: 35px;
+  margin-top: 45px;
   font-size: 18px;
   line-height: 1.8;
   text-align: center;
+  font-style: italic;
 }
 
 .info-section {
