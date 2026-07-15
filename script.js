@@ -85,12 +85,12 @@ const villaImages = {
 
   "luxury-sol":[
     "images/LuxurySOL/sol3.jpg",
-    "images/LuxurySOL/sol16.jpg",
     "images/LuxurySOL/sol12.jpg",
     "images/LuxurySOL/sol8.jpg",
+    "images/LuxurySOL/sol18.jpg",
+    "images/LuxurySOL/sol16.jpg",
     "images/LuxurySOL/sol14.jpg",
-    "images/LuxurySOL/sol17.jpg",
-    "images/LuxurySOL/sol18.jpg"
+    "images/LuxurySOL/sol17.jpg"
   ],
 
   "luxury-luna":[
