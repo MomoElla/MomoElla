@@ -866,6 +866,10 @@ footer {
 
 @media (max-width: 600px) {
 
+    .hero-content p {
+     font-size: 18px !important;
+}
+
   .gallery-section {
     padding:80px 5%;
   }
