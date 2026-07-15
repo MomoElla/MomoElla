@@ -94,7 +94,6 @@ const villaImages = {
   ],
 
   "luxury-luna":[
-
   "images/Hero/Hero11.jpg",
   "images/LuxuryLUNA/luna16.jpg",
   "images/LuxuryLUNA/luna12.jpg",
@@ -102,7 +101,6 @@ const villaImages = {
   "images/LuxuryLUNA/luna14.jpg",
   "images/LuxuryLUNA/luna8.jpg",
   "images/LuxuryLUNA/luna7.jpg"
-
 ]
 
 };
