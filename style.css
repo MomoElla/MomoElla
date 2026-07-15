@@ -1211,4 +1211,11 @@ footer {
   #access {
     padding: 35px 20px !important;
   }
+     #about {
+    padding-bottom: 15px;
+  }
+
+  #about + .gallery-small {
+    margin-top: 10px;
+  }
 }
