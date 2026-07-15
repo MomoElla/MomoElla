@@ -1042,10 +1042,11 @@ footer {
 
 
   .experience-block h1 {
-      font-size:1.7rem;
-      line-height:1.4;
-      margin-top:20px;
-      margin-bottom:10px;
+      font-size:1.7rem !important;
+      line-height:1.4 !important;
+      margin-top:20px !important;
+      margin-bottom:10px !important;
+      fontsize:20px !important;
   }
 
 
