@@ -1170,4 +1170,18 @@ footer {
     object-fit:cover;
   }
 
+ .thumbnails{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .thumbnails img{
+    width: 70px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
 }
