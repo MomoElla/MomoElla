@@ -1183,4 +1183,27 @@ footer {
     object-fit: cover;
     border-radius: 6px;
   }
+     /* Heroの後 */
+  #home {
+    margin-bottom: 30px;
+  }
+
+
+  /* About / Villas / Experienceなど */
+  .info-section {
+    padding: 35px 20px;
+  }
+
+
+  /* Galleryの余白 */
+  .gallery-small,
+  .thumbnails {
+    margin-bottom: 35px;
+  }
+
+
+  /* Accessなど */
+  #access {
+    padding: 35px 20px;
+  }
 }
