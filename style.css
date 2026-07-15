@@ -175,6 +175,13 @@ details summary:hover {
   opacity: 0.7;
 }
 
+.story-end {
+  margin-top: 35px;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: center;
+}
+
 .info-section {
 
   display: grid;
