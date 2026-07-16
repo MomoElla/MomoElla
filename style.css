@@ -952,7 +952,7 @@ footer {
     gap: 10px;
 }
 
-#friends-place .gallery-small{
+#friends-place .gallery-small img{
     margin-bottom:20px !important;
     padding:20px !important;
 }
@@ -1241,6 +1241,8 @@ footer {
     border-radius:15px;
 
     scroll-snap-align:start;
+      margin-bottom: 200px;
+
 
   }
 
@@ -1369,8 +1371,8 @@ footer {
     margin-bottom: 25px;
 }
 
-#friends-place .gallery-small{
-    margin-bottom:20px !important;
+#friends-place .gallery-small img{
+    margin-bottom:10px !important;
 }
 
 #friends-place p{
@@ -1381,9 +1383,6 @@ footer {
 
 .friends-button{
     padding: 13px 30px;
-}
-    #friends-place .gallery-small{
-    margin-bottom:10px;
 }
 
 }
