@@ -946,14 +946,20 @@ color: #9b7355;
 
 /* Gallery */
 
-.gallery-small{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 10px;
-}
 
-#friends-place .gallery-small img{
-    margin-bottom:10px !important;
+
+#friends-place .gallery-small {
+ display:grid;
+
+ grid-template-columns:repeat(3,1fr);
+
+ gap:10px;
+
+ padding:0 8% 0px !important;
+    
+border-radius:20px;
+        
+margin-bottom:10px !important;
 }
 
 .gallery-small img{
