@@ -909,6 +909,79 @@ footer {
 .mobile-break{
     display:none;
 }
+/* ==========================
+   Friends Place
+========================== */
+
+#friends-place{
+    width: 100%;
+    padding: 90px 20px;
+    background: #f9f7f2;
+    text-align: center;
+}
+
+.friends-content{
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+#friends-place h2{
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8c7a63;
+    margin-bottom: 10px;
+}
+
+#friends-place h1{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #3f3b35;
+}
+
+/* Gallery */
+
+.gallery-small{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-bottom: 25px;   /* ← 写真と文章の間隔 */
+}
+
+.gallery-small img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Text */
+
+#friends-place p{
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.9;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Button */
+
+.friends-button{
+    display: inline-block;
+    padding: 14px 36px;
+    background: #8c6a45;
+    color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.friends-button:hover{
+    background: #6d5133;
+}
 
 /* Tablet */
 
@@ -1275,4 +1348,29 @@ footer {
     min-height: auto　!important;
     padding: 30px 20px　!important;
 }
+    #friends-place{
+    padding: 70px 20px;
+}
+
+#friends-place h1{
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+}
+
+.gallery-small{
+    grid-template-columns: repeat(2,1fr);
+    gap: 8px;
+    margin-bottom: 18px;   /* ← 写真と文章の間隔を狭く */
+}
+
+#friends-place p{
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.friends-button{
+    padding: 13px 30px;
+}
+
 }
