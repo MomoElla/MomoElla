@@ -898,10 +898,6 @@ footer {
   transition: 0.3s;
 }
 
-.gallery-small{
-    margin-bottom:20px;
-}
-
 #friends-place p{
     margin-top:0;
 }
@@ -954,7 +950,7 @@ footer {
 }
 
 #friends-place .gallery-small{
-    margin-bottom:20px;
+    margin-bottom:20px !important;
 }
 
 .gallery-small img{
@@ -1365,10 +1361,8 @@ footer {
     margin-bottom: 25px;
 }
 
-.gallery-small{
-    grid-template-columns: repeat(2,1fr);
-    gap: 8px;
-    margin-bottom: 18px;   /* ← 写真と文章の間隔を狭く */
+#friends-place .gallery-small{
+    margin-bottom:20px !important;
 }
 
 #friends-place p{
