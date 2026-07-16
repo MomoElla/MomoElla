@@ -548,6 +548,14 @@ h2 {
   margin-bottom: 120px;
 }
 
+#experience .container h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    margin-top: 150px;
+ }   
+
 /* ========about=======　*/
 .about {
   padding: 120px 0;
@@ -680,19 +688,12 @@ h2 {
 
 
 .gallery-header h2 {
-  font-family: serif;
-  font-size: 48px;
-  font-weight: 400;
-  color: #3f4638;
-  margin-bottom: 15px;
-}
-
-
-.gallery-header p {
-  font-size: 18px;
-  letter-spacing: 2px;
-  color: #6b7061;
-}
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    margin-top: 150px;
+ }   
 
 
 /* Grid */
