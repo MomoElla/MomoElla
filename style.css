@@ -1340,7 +1340,7 @@ footer {
   /* Galleryの余白 */
   .gallery-small,
   .thumbnails {
-    margin-bottom: 35px !important;
+    margin-bottom: 20px !important;
   }
 
 
