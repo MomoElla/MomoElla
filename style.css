@@ -1401,7 +1401,7 @@ margin-bottom:10px !important;
     border-radius:15px;
 
     scroll-snap-align:start;
-      margin-bottom: 100px;
+      margin-bottom: 10px;
 
 
   }
@@ -1433,5 +1433,4 @@ margin-bottom:10px !important;
 .friends-button{
     padding: 13px 30px;
 }
-
 }
