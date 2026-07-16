@@ -165,7 +165,7 @@ header {
 
 details summary {
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 15px;
   font-size: 14px;
   letter-spacing: 2px;
   color: #8b5e3c;
@@ -176,7 +176,7 @@ details summary:hover {
 }
 
 .story-end {
-  margin-top: 30px;
+  margin-top: 15px;
   font-size: 18px;
   text-align: center;
   font-style: italic;
