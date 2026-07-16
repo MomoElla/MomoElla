@@ -37,12 +37,6 @@ header{
     padding: 18px 40px;
 }
 
-.logo img{
-    width: 10px;   /* 好きな大きさに調整 */
-    height: auto;
-    display: block;
-}
-
 .hero {
   position: relative;
   height: 100vh;
