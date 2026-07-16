@@ -889,9 +889,6 @@ footer {
   border-radius: 50%;
   border: none;
 
-  background-color: #c8a27a;
-  color: white;
-
   font-size: 22px;
   cursor: pointer;
 
@@ -900,6 +897,13 @@ footer {
   transition: 0.3s;
 }
 
+.gallery-small{
+    margin-bottom:20px;
+}
+
+#friends-place p{
+    margin-top:0;
+}
 
 #topBtn:hover {
   transform: translateY(-5px);
@@ -946,7 +950,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
-    margin-bottom: 25px;   /* ← 写真と文章の間隔 */
+    margin-bottom: 20px;   /* ← 写真と文章の間隔 */
 }
 
 .gallery-small img{
