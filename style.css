@@ -838,7 +838,8 @@ footer {
 #friends-place {
   padding: 80px 20px;
   text-align: center;
-  background-color: #faf7f2;
+   background: #f7f4ef;
+  color: #4a3427;
 }
 
 .friends-content {
