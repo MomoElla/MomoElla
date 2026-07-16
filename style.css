@@ -1216,7 +1216,7 @@ footer {
     overflow-x:auto;
     gap:15px;
 
-    padding:0 8% 60px;
+    padding:10px;
 
     scroll-snap-type:x mandatory;
 
