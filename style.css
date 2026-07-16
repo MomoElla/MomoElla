@@ -30,6 +30,18 @@ body {
   color: #4a3427;
   
 }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+}
+
+.logo img{
+    width: 55px;   /* 好きな大きさに調整 */
+    height: auto;
+    display: block;
+}
 
 .hero {
   position: relative;
