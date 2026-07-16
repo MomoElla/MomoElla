@@ -238,7 +238,7 @@ details summary:hover {
 
  gap:20px;
 
- padding:0 8% 20px;
+ padding:0 8% 120px;
     
 border-radius:20px;
 
@@ -951,7 +951,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
-    margin-bottom: 20px !important;   /* ← 写真と文章の間隔 */
+}
+
+#friends-place .gallery-small{
+    margin-bottom:20px;
 }
 
 .gallery-small img{
@@ -1216,7 +1219,7 @@ footer {
     overflow-x:auto;
     gap:15px;
 
-    padding:10px;
+    padding:20px;
 
     scroll-snap-type:x mandatory;
 
@@ -1376,6 +1379,9 @@ footer {
 
 .friends-button{
     padding: 13px 30px;
+}
+    #friends-place .gallery-small{
+    margin-bottom:10px;
 }
 
 }
