@@ -950,7 +950,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
-    margin-bottom: 20px;   /* ← 写真と文章の間隔 */
+    margin-bottom: 20px !important;   /* ← 写真と文章の間隔 */
 }
 
 .gallery-small img{
