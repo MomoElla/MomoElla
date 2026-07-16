@@ -1376,9 +1376,53 @@ margin-bottom:10px !important;
     margin-bottom: 25px;
 }
 
-#friends-place .gallery-small img{
-    margin-bottom:10px !important;
-}
+#friends-place .gallery-small{
+   
+
+    display:flex;
+    overflow-x:auto;
+    gap:15px;
+
+    padding:20px;
+
+    scroll-snap-type:x mandatory;
+
+  }
+
+
+ #friends-place .gallery-small img {
+
+    flex:0 0 85%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    scroll-snap-align:start;
+      margin-bottom: 200px;
+
+
+  }
+
+  /* スクロールバーを隠す */
+    
+   #friends-place .gallery-small::-webkit-scrollbar {
+    display:none;
+  }
+
+    
+
+  .main-image-wrapper{
+
+    position:relative;
+
+    width:100%;
+
+    touch-action:pan-y;
+
+  }
 
 #friends-place p{
     font-size: 0.95rem;
