@@ -1,717 +1,428 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momo Ella | Private Villas in Ella, Sri Lanka</title>
+  <meta name="description" content="Momo Ella is a private villa retreat in Ella, Sri Lanka. Slow down, rest, recharge, and reconnect with nature amid tea fields and mountain views.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <!-- ===== HEADER ===== -->
 <header class="header">
+  <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-<button class="menu-btn" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-  
   <nav class="nav" id="navMenu">
     <a href="#home">Home</a>
     <a href="#villas">Villas</a>
     <a href="#about">About</a>
-    <a href="#Experiences">Experiences</a>
+    <a href="#experiences">Experiences</a>
     <a href="#gallery">Gallery</a>
     <a href="#access">Access</a>
-
-     <a href="#booking" class="book-btn">Contact us</a>
+    <a href="#booking" class="book-btn">Contact us</a>
   </nav>
-
 </header>
 
 <!-- ===== HOME ===== -->
 <section id="home">
-  
-   <div class="hero">
+  <div class="hero">
+    <img src="images/Hero/Hero8.jpg" class="hero-img active" alt="" loading="eager">
+    <img src="images/Hero/Hero5.jpg" class="hero-img" alt="" loading="lazy">
+    <img src="images/Hero/Hero13.jpg" class="hero-img" alt="" loading="lazy">
+    <img src="images/Hero/Hero11.jpg" class="hero-img" alt="" loading="lazy">
+    <img src="images/Hero/Hero12.jpg" class="hero-img" alt="" loading="lazy">
+    <img src="images/Hero/Hero10.jpg" class="hero-img" alt="" loading="lazy">
+    <img src="images/Hero/Hero9.jpg" class="hero-img" alt="" loading="lazy">
+    <img src="images/Hero/Hero4.jpg" class="hero-img" alt="" loading="lazy">
+    <img src="images/Hero/Hero2.jpg" class="hero-img" alt="" loading="lazy">
 
-    <img src="images/Hero/Hero8.jpg" class="hero-img active">
-    <img src="images/Hero/Hero5.jpg" class="hero-img">
-    <img src="images/Hero/Hero13.jpg" class="hero-img">
-     <img src="images/Hero/Hero11.jpg" class="hero-img">
-      <img src="images/Hero/Hero12.jpg" class="hero-img">
-      <img src="images/Hero/Hero10.jpg" class="hero-img">
-      <img src="images/Hero/Hero9.jpg" class="hero-img">
-      <img src="images/Hero/Hero4.jpg" class="hero-img">
-       <img src="images/Hero/Hero2.jpg" class="hero-img">
     <div class="hero-content">
+      <p class="eyebrow">Ella, Sri Lanka</p>
       <h1>Momo Ella</h1>
       <p>Slow down, rest, recharge, and reconnect <span class="mobile-break"><br></span>with nature in Ella.</p>
+      <a href="#villas" class="hero-btn">Explore Villas</a>
     </div>
   </div>
-
 </section>
-  
- <!-- Villas -->
- <section id="villas" class="villas">
 
-    <h2>Our Villas</h2>
+<!-- ===== VILLAS ===== -->
+<section id="villas" class="villas">
+  <p class="eyebrow">Where to stay</p>
+  <h2>Our Villas</h2>
 
-    <div class="tabs">
-      <button class="tab active" onclick="showVilla('standard', this)">Standard</button>
-      <button class="tab" onclick="showVilla('deluxe', this)">Deluxe</button> 
-      <button class="tab" onclick="showVilla('luxury-sol', this)">
-        Luxury
-    <span class="mobile-break"><br></span>- Sol -
-</button>
-      <button class="tab" onclick="showVilla('luxury-luna', this)">
-        Luxury 
-          <span class="mobile-break"><br></span>- Luna -
-      </button> 
-    </div>
+  <div class="tabs">
+    <button class="tab active" onclick="showVilla('standard', this)">Standard</button>
+    <button class="tab" onclick="showVilla('deluxe', this)">Deluxe</button>
+    <button class="tab" onclick="showVilla('luxury-sol', this)">Luxury<span class="mobile-break"><br></span> - Sol -</button>
+    <button class="tab" onclick="showVilla('luxury-luna', this)">Luxury<span class="mobile-break"><br></span> - Luna -</button>
+  </div>
 
-
-    <!-- Standard -->
+  <!-- Standard -->
   <div class="villa-content active" id="standard">
-
-  <div class="main-image-wrapper">
-
-    <button class="slider-btn prev" onclick="prevImage('standard')">
-      <i class="fa-solid fa-chevron-left"></i>
-    </button>
-
-
-    <img id="main-standard" 
-         class="main-image" 
-         src="images/Standard/stn1.jpg">
-
-
-    <button class="slider-btn next" onclick="nextImage('standard')">
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
+    <div class="main-image-wrapper">
+      <button class="slider-btn prev" aria-label="Previous photo" onclick="prevImage('standard')">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <img id="main-standard" class="main-image" src="images/Standard/stn1.jpg" alt="Standard villa at Momo Ella">
+      <button class="slider-btn next" aria-label="Next photo" onclick="nextImage('standard')">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="thumbnails">
+      <img src="images/Standard/stn10.jpg" alt="Standard villa detail" onclick="changeImage('standard', this)">
+      <img src="images/Standard/stn11.jpg" alt="Standard villa detail" onclick="changeImage('standard', this)">
+      <img src="images/Standard/stn9.jpg" alt="Standard villa detail" onclick="changeImage('standard', this)">
+      <img src="images/Standard/stn4.jpg" alt="Standard villa detail" onclick="changeImage('standard', this)">
+      <img src="images/Standard/stn3.jpg" alt="Standard villa detail" onclick="changeImage('standard', this)">
+      <img src="images/Standard/stn8.jpg" alt="Standard villa detail" onclick="changeImage('standard', this)">
+    </div>
   </div>
 
-
-  <div class="thumbnails">
-
-    <img src="images/Standard/stn10.jpg" onclick="changeImage('standard', this)">
-    <img src="images/Standard/stn11.jpg" onclick="changeImage('standard', this)">
-    <img src="images/Standard/stn9.jpg" onclick="changeImage('standard', this)">
-    <img src="images/Standard/stn4.jpg" onclick="changeImage('standard', this)">
-    <img src="images/Standard/stn3.jpg" onclick="changeImage('standard', this)">
-    <img src="images/Standard/stn8.jpg" onclick="changeImage('standard', this)">
-
+  <!-- Deluxe -->
+  <div class="villa-content" id="deluxe">
+    <div class="main-image-wrapper">
+      <button class="slider-btn prev" aria-label="Previous photo" onclick="prevImage('deluxe')">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <img id="main-deluxe" class="main-image" src="images/Deluxe/DX13.jpg" alt="Deluxe villa at Momo Ella">
+      <button class="slider-btn next" aria-label="Next photo" onclick="nextImage('deluxe')">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="thumbnails">
+      <img src="images/Deluxe/DX12.jpg" alt="Deluxe villa detail" onclick="changeImage('deluxe', this)">
+      <img src="images/Deluxe/DX4.jpg" alt="Deluxe villa detail" onclick="changeImage('deluxe', this)">
+      <img src="images/Deluxe/DX14.jpg" alt="Deluxe villa detail" onclick="changeImage('deluxe', this)">
+      <img src="images/Deluxe/DX3.jpg" alt="Deluxe villa detail" onclick="changeImage('deluxe', this)">
+      <img src="images/Deluxe/DX2.jpg" alt="Deluxe villa detail" onclick="changeImage('deluxe', this)">
+      <img src="images/Deluxe/DX7.jpg" alt="Deluxe villa detail" onclick="changeImage('deluxe', this)">
+    </div>
   </div>
 
-</div>
-
-
-
-    <!-- Deluxe -->
-    <div class="villa-content" id="deluxe">
-
-  <div class="main-image-wrapper">
-
-    <button class="slider-btn prev" onclick="prevImage('deluxe')">
-      <i class="fa-solid fa-chevron-left"></i>
-    </button>
-
-
-    <img id="main-deluxe" 
-         class="main-image" 
-         src="images/Deluxe/DX13.jpg">
-
-
-    <button class="slider-btn next" onclick="nextImage('deluxe')">
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
+  <!-- Luxury Sol -->
+  <div class="villa-content" id="luxury-sol">
+    <div class="main-image-wrapper">
+      <button class="slider-btn prev" aria-label="Previous photo" onclick="prevImage('luxury-sol')">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <img id="main-luxury-sol" class="main-image" src="images/LuxurySOL/sol3.jpg" alt="Luxury Sol villa at Momo Ella">
+      <button class="slider-btn next" aria-label="Next photo" onclick="nextImage('luxury-sol')">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="thumbnails">
+      <img src="images/LuxurySOL/sol12.jpg" alt="Luxury Sol villa detail" onclick="changeImage('luxury-sol', this)">
+      <img src="images/LuxurySOL/sol8.jpg" alt="Luxury Sol villa detail" onclick="changeImage('luxury-sol', this)">
+      <img src="images/LuxurySOL/sol18.jpg" alt="Luxury Sol villa detail" onclick="changeImage('luxury-sol', this)">
+      <img src="images/LuxurySOL/sol16.jpg" alt="Luxury Sol villa detail" onclick="changeImage('luxury-sol', this)">
+      <img src="images/LuxurySOL/sol14.jpg" alt="Luxury Sol villa detail" onclick="changeImage('luxury-sol', this)">
+      <img src="images/LuxurySOL/sol17.jpg" alt="Luxury Sol villa detail" onclick="changeImage('luxury-sol', this)">
+    </div>
   </div>
 
-
-  <div class="thumbnails">
-
-    <img src="images/Deluxe/DX12.jpg" onclick="changeImage('deluxe', this)">
-    <img src="images/Deluxe/DX4.jpg" onclick="changeImage('deluxe', this)">
-    <img src="images/Deluxe/DX14.jpg" onclick="changeImage('deluxe', this)">
-    <img src="images/Deluxe/DX3.jpg" onclick="changeImage('deluxe', this)">
-    <img src="images/Deluxe/DX2.jpg" onclick="changeImage('deluxe', this)">
-    <img src="images/Deluxe/DX7.jpg" onclick="changeImage('deluxe', this)">
-
+  <!-- Luxury Luna -->
+  <div class="villa-content" id="luxury-luna">
+    <div class="main-image-wrapper">
+      <button class="slider-btn prev" aria-label="Previous photo" onclick="prevImage('luxury-luna')">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <img id="main-luxury-luna" class="main-image" src="images/Hero/Hero11.jpg" alt="Luxury Luna villa at Momo Ella">
+      <button class="slider-btn next" aria-label="Next photo" onclick="nextImage('luxury-luna')">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="thumbnails">
+      <img src="images/LuxuryLUNA/luna16.jpg" alt="Luxury Luna villa detail" onclick="changeImage('luxury-luna', this)">
+      <img src="images/LuxuryLUNA/luna12.jpg" alt="Luxury Luna villa detail" onclick="changeImage('luxury-luna', this)">
+      <img src="images/LuxuryLUNA/luna10.jpg" alt="Luxury Luna villa detail" onclick="changeImage('luxury-luna', this)">
+      <img src="images/LuxuryLUNA/luna14.jpg" alt="Luxury Luna villa detail" onclick="changeImage('luxury-luna', this)">
+      <img src="images/LuxuryLUNA/luna8.jpg" alt="Luxury Luna villa detail" onclick="changeImage('luxury-luna', this)">
+      <img src="images/LuxuryLUNA/luna7.jpg" alt="Luxury Luna villa detail" onclick="changeImage('luxury-luna', this)">
+    </div>
   </div>
-
-</div>
-
-
-
-    <!-- Luxury 1 -->
-   <div class="villa-content" id="luxury-sol">
-
-
-  <div class="main-image-wrapper">
-
-    <button class="slider-btn prev" onclick="prevImage('luxury-sol')">
-      <i class="fa-solid fa-chevron-left"></i>
-    </button>
-
-
-    <img id="main-luxury-sol" 
-         class="main-image" 
-         src="images/LuxurySOL/sol3.jpg">
-
-
-    <button class="slider-btn next" onclick="nextImage('luxury-sol')">
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-  </div>
-
-
-
-  <div class="thumbnails">
-
-    <img src="images/LuxurySOL/sol12.jpg" onclick="changeImage('luxury-sol', this)">
-    <img src="images/LuxurySOL/sol8.jpg" onclick="changeImage('luxury-sol', this)">
-    <img src="images/LuxurySOL/sol18.jpg" onclick="changeImage('luxury-sol', this)">
-    <img src="images/LuxurySOL/sol16.jpg" onclick="changeImage('luxury-sol', this)">
-    <img src="images/LuxurySOL/sol14.jpg" onclick="changeImage('luxury-sol', this)">
-    <img src="images/LuxurySOL/sol17.jpg" onclick="changeImage('luxury-sol', this)">
-
-  </div>
-
-</div>
-
-    <!-- Luxury 2 -->
-   <div class="villa-content" id="luxury-luna">
-
-
-  <div class="main-image-wrapper">
-
-    <button class="slider-btn prev" onclick="prevImage('luxury-luna')">
-      <i class="fa-solid fa-chevron-left"></i>
-    </button>
-
-
-    <img id="main-luxury-luna" 
-         class="main-image" 
-         src="images/Hero/Hero11.jpg">
-
-
-    <button class="slider-btn next" onclick="nextImage('luxury-luna')">
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-  </div>
-
-
-
-  <div class="thumbnails">
-
-    <img src="images/LuxuryLUNA/luna16.jpg" onclick="changeImage('luxury-luna', this)">
-    <img src="images/LuxuryLUNA/luna12.jpg" onclick="changeImage('luxury-luna', this)">
-    <img src="images/LuxuryLUNA/luna10.jpg" onclick="changeImage('luxury-luna', this)">
-    <img src="images/LuxuryLUNA/luna14.jpg" onclick="changeImage('luxury-luna', this)">
-    <img src="images/LuxuryLUNA/luna8.jpg" onclick="changeImage('luxury-luna', this)">
-    <img src="images/LuxuryLUNA/luna7.jpg" onclick="changeImage('luxury-luna', this)">
-
-  </div>
-
-
-</div>
-
-  </section>
-
-
-  <!--About---->
-<section id="about" class="info-section">
-
-  <div class="info-image">
-    <img src="images/Momo/momo3.jpg" alt="Momo">
-  </div>
-
-  <div class="info-content">
-
-    <h2>Our Story</h2>
-
-  <p>
-  One day in Ella, a little stray puppy came into my life.
- </p>
-    
- <p> 
-   I named her Momo...
-</p>
-
-<details>
-  <summary>Discover our story</summary>
-
-  <p>
-    When I visited Momo a year later, the person who had been caring for her 
-    showed me a beautiful piece of land on a hilltop.
-
-  </p>
-
-  <p>
-   When I saw the endless tea fields, breathtaking mountain views, 
-    and a spectacular sunset from that hilltop, I instantly fell in love with this place.
-
-  </p>
-
-  <p>
-    As we stood on that land, he shared his dream with me. 
-    On that day, we decided to work together to bring that dream to life and create a place 
-    where everyone could slow down, rest, recharge, and reconnect with nature.
-  </p>
-
-  <p>
-    Through hard work, trust, and teamwork, Momo Ella slowly began to take shape.
-  </p>
-
-  <p class="story-end">
-    That little encounter with Momo connected me with his dream 
-    and led me to the next chapter of my life. 
-    Today, that shared dream has become MOMO ELLA.
-  </p>
-
-    </details>
-
-  </div>
-
 </section>
 
-<div class="gallery-small">
+<!-- ===== ABOUT / OUR STORY ===== -->
+<section id="about">
+  <div class="info-section">
+    <div class="info-image">
+      <img src="images/Momo/momo3.jpg" alt="Momo the dog who inspired Momo Ella" loading="lazy">
+    </div>
+    <div class="info-content">
+      <p class="eyebrow">Our story</p>
+      <h2>How It Began</h2>
 
-  <img src="images/Momo/momo5.jpg">
-  <img src="images/ourstory/ourstory4.jpg">
-  <img src="images/gallery/gallery38.jpg">
+      <p>One day in Ella, a little stray puppy came into my life.</p>
+      <p>I named her Momo.</p>
 
-</div>
-
-  <!----About 2 ----->
-<section class="info-section reverse">
-
-  <div class="info-image">
-    <img src="images/menu/menu8.jpg">
+      <details>
+        <summary>Discover our story</summary>
+        <p>When I visited Momo a year later, the person who had been caring for her showed me a beautiful piece of land on a hilltop.</p>
+        <p>When I saw the endless tea fields, breathtaking mountain views, and a spectacular sunset from that hilltop, I instantly fell in love with this place.</p>
+        <p>As we stood on that land, he shared his dream with me. On that day, we decided to work together to bring that dream to life and create a place where everyone could slow down, rest, recharge, and reconnect with nature.</p>
+        <p>Through hard work, trust, and teamwork, Momo Ella slowly began to take shape.</p>
+        <p class="story-end">That little encounter with Momo connected me with his dream and led me to the next chapter of my life. Today, that shared dream has become MOMO ELLA.</p>
+      </details>
+    </div>
   </div>
 
-  <div class="info-content">
-
-    <h2>
-       Sri Lankan Dining
-    </h2>
-
-    <p>
-     Enjoy authentic organic Sri Lankan cuisine freshly prepared at Momo Ella.
-      Our chef cooks the Sri Lankan cuisine with only natural herbs with salt and pepper. 
-    </p>
-
+  <div class="gallery-small">
+    <img src="images/Momo/momo5.jpg" alt="Momo Ella grounds" loading="lazy">
+    <img src="images/ourstory/ourstory4.jpg" alt="Momo Ella surroundings" loading="lazy">
+    <img src="images/gallery/gallery38.jpg" alt="Momo Ella view" loading="lazy">
   </div>
 
+  <!-- Dining -->
+  <div class="info-section reverse">
+    <div class="info-image">
+      <img src="images/menu/menu8.jpg" alt="Sri Lankan dish served at Momo Ella" loading="lazy">
+    </div>
+    <div class="info-content">
+      <p class="eyebrow">On the table</p>
+      <h2>Sri Lankan Dining</h2>
+      <p>Enjoy authentic organic Sri Lankan cuisine freshly prepared at Momo Ella. Our chef cooks the Sri Lankan cuisine with only natural herbs with salt and pepper.</p>
+    </div>
+  </div>
+
+  <div class="gallery-small">
+    <img src="images/menu/menu3.jpg" alt="Sri Lankan curry dish" loading="lazy">
+    <img src="images/menu/menu2.jpg" alt="Traditional meal presentation" loading="lazy">
+    <img src="images/menu/menu13.jpg" alt="Dining at Momo Ella" loading="lazy">
+  </div>
+
+  <!-- Saree -->
+  <div class="info-section">
+    <div class="info-image">
+      <img src="images/experience/experience12.jpg" alt="Saree experience at Momo Ella" loading="lazy">
+    </div>
+    <div class="info-content">
+      <p class="eyebrow">Try something new</p>
+      <h2>Saree Experience</h2>
+      <p>Experience the beauty of traditional Sri Lankan culture.</p>
+    </div>
+  </div>
+
+  <div class="gallery-small">
+    <img src="images/experience/experience14.jpg" alt="Guest wearing a saree" loading="lazy">
+    <img src="images/experience/experience13.jpg" alt="Saree draping experience" loading="lazy">
+    <img src="images/experience/experience19.jpg" alt="Traditional Sri Lankan dress" loading="lazy">
+  </div>
 </section>
 
-
-<div class="gallery-small">
-
-        <img src="images/menu/menu3.jpg">
-        <img src="images/menu/menu2.jpg">
-        <img src="images/menu/menu13.jpg">
-
-</div>
-
-
-
-  
-  
-  <!----About 3 SAREE ------->
- <section class="info-section">
-
-  <div class="info-image">
-    <img src="images/experience/experience12.jpg">
-  </div>
-
-  <div class="info-content">
-
-    <h2>
-       Saree Experience
-    </h2>
-
-    <p>
-      Experience the beauty of traditional Sri Lankan culture.
-</p>
-  </div>
-
-</section>
-
-
-<div class="gallery-small">
-
-   <img src="images/experience/experience14.jpg">
-        <img src="images/experience/experience13.jpg">
-         <img src="images/experience/experience19.jpg">
-
-</div>
-
-
-
-<!-- ===== Local Experiences with Tuk-Tuk Transfers ===== -->
-  <section id="Experiences">
-
+<!-- ===== EXPERIENCES ===== -->
+<section id="experiences">
   <div class="container">
-
+    <p class="eyebrow">Nearby</p>
     <h2>Experience Ella</h2>
-    
-     <!-- 1 -->
-    
-     <div class="experience-block">
 
-  <h1>Mahamevnawa Buddhist Monastery</h1>
-  <p class="experience-time">Approx. 40 minutes (one way)</p>
+    <div class="experience-block">
+      <h3>Mahamevnawa Buddhist Monastery</h3>
+      <p class="experience-time">Approx. 40 minutes (one way)</p>
+      <img class="experience-hero" src="images/experience/experience1.jpg" alt="Mahamevnawa Buddhist Monastery" loading="lazy">
+      <div class="experience-text">
+        <p>Experience the peaceful atmosphere of Mahamevnawa Buddhist Monastery.</p>
+      </div>
+      <div class="experience-gallery">
+        <img src="images/experience/experience2.jpg" alt="Monastery grounds" loading="lazy">
+        <img src="images/experience/experience4.jpg" alt="Monastery detail" loading="lazy">
+        <img src="images/experience/experience3.jpg" alt="Monastery surroundings" loading="lazy">
+      </div>
+    </div>
 
-    
-  <img class="experience-hero"
-       src="images/experience/experience1.jpg"
-       alt="Mahamevnawa Buddhist Monastery">
+    <div class="experience-block">
+      <h3>Nine Arch Bridge</h3>
+      <p class="experience-time">Approx. 20 minutes (one way)</p>
+      <img class="experience-hero" src="images/experience/experience5.jpg" alt="Nine Arch Bridge" loading="lazy">
+      <div class="experience-text">
+        <p>One of Sri Lanka's most iconic landmarks, surrounded by tea plantations and misty hills.</p>
+      </div>
+      <div class="experience-gallery">
+        <img src="images/experience/experience16.jpg" alt="Nine Arch Bridge view" loading="lazy">
+        <img src="images/experience/experience10.jpg" alt="Train crossing Nine Arch Bridge" loading="lazy">
+        <img src="images/gallery/gallery1.jpg" alt="Tea plantations near the bridge" loading="lazy">
+      </div>
+    </div>
 
-  <div class="experience-text">
-    <p>
-Experience the peaceful atmosphere of Mahamevnawa Buddhist Monastery.
-    </p>
+    <div class="experience-block">
+      <h3>Ella Town</h3>
+      <p class="experience-time">Approx. 10 minutes (one way)</p>
+      <img class="experience-hero" src="images/experience/experience9.jpg" alt="Ella town" loading="lazy">
+      <div class="experience-text">
+        <p>Explore local shops, cafés, and Sri Lankan culture in the heart of Ella.</p>
+      </div>
+      <div class="experience-gallery">
+        <img src="images/experience/experience18.jpg" alt="Ella town street" loading="lazy">
+        <img src="images/experience/experience15.jpg" alt="Ella town shops" loading="lazy">
+        <img src="images/gallery/gallery33.jpg" alt="Ella town view" loading="lazy">
+      </div>
+    </div>
   </div>
-
-  <div class="experience-gallery">
-    <img src="images/experience/experience2.jpg" alt="">
-    <img src="images/experience/experience4.jpg" alt="">
-    <img src="images/experience/experience3.jpg" alt="">
-  </div>
-
-</div>
-    
- <!-- 2 -->
- <div class="experience-block">
-
-  <h1>Nine Arch Bridge</h1>
-  <p class="experience-time">Approx. 20 minutes (one way)</p>
-
-    
-  <img class="experience-hero"
-       src="images/experience/experience5.jpg"
-       alt="Nine Arch Bridge">
-
-  <div class="experience-text">
-    <p>
-One of Sri Lanka’s most iconic landmarks, surrounded by tea plantations and misty hills.
-    </p>
-  </div>
-
-  <div class="experience-gallery">
-    <img src="images/experience/experience16.jpg" alt="">
-    <img src="images/experience/experience10.jpg" alt="">
-    <img src="images/gallery/gallery1.jpg" alt="">
-  </div>
-
-</div>
-         
-    
-    <!-- 3 -->
-
- <div class="experience-block">
-
-  <h1>Ella Town</h1>
-  <p class="experience-time">Approx. 10 minutes (one way)</p>
-
-    
-  <img class="experience-hero"
-       src="images/experience/experience9.jpg"
-       alt="Nine Arch Bridge">
-
-  <div class="experience-text">
-    <p>
-Explore local shops, cafés, and Sri Lankan culture in the heart of Ella.
-    </p>
-  </div>
-
-  <div class="experience-gallery">
-    <img src="images/experience/experience18.jpg" alt="">
-    <img src="images/experience/experience15.jpg" alt="">
-     <img src="images/gallery/gallery33.jpg" alt="">
-  </div>
-
-</div>
-
 </section>
 
 <!-- ===== GALLERY ===== -->
 <section id="gallery" class="gallery-section">
-
   <div class="gallery-header">
+    <p class="eyebrow">A closer look</p>
     <h2>Gallery</h2>
   </div>
-  
+
   <div class="gallery-grid">
-
-   <!-- ==== <div class="gallery-item">
-      <img src="images/gallery/gallery2.jpg" alt="Villa">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/gallery/gallery7.jpg" alt="Nature">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/gallery/gallery9.jpg" alt="Breakfast">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/gallery/gallery17.jpg" alt="Mountain view">
-    </div>
-    
-    <div class="gallery-item">
-      <img src="images/gallery/gallery37.jpg" alt="Mountain view">
-    </div>
-    <div class="gallery-item">
-      <img src="images/gallery/gallery8.jpg" alt="Room">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/gallery/gallery19.jpg" alt="Ella landscape">
-    </div>
-
-    <div class="gallery-item">
-     <img src="images/experience/experience19.jpg" alt="Nature">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/gallery/gallery14.jpg" alt="Details">
-    </div>
-
-     <div class="gallery-item">
-     <img src="images/gallery/gallery20.jpg" alt="Nature">
-    </div> == -->
-
-    <div class="gallery-item">
-      <img src="images/Momo/momo7.jpg" alt="Breakfast">
-    </div>
-    
-    <div class="gallery-item">
-      <img src="images/gallery/gallery32.jpg" alt="Momo Ella view">
-    </div>
-    
-    <div class="gallery-item">
-      <img src="images/gallery/gallery34.jpg" alt="Villa">
-    </div>
-
-
-    <div class="gallery-item">
-      <img src="images/Momo/momo6.jpg" alt="Mountain">
-    </div>
-
-    
-  <div class="gallery-item">
-      <img src="images/Momo/momo1.jpg" alt="Sunset">
-    </div>
-    
-    <div class="gallery-item">
-      <img src="images/Momo/momo8.jpg" alt="Garden">
-    </div>
-
-     <div class="gallery-item">
-      <img src="images/Momo/momo2.jpg" alt="elephant">
-    </div>
-
-    
-    <div class="gallery-item">
-      <img src="images/ourstory/ourstory9.jpg" alt="Momo">
-         </div>
-
-     <div class="gallery-item">
-      <img src="images/ourstory/ourstory3.jpg" alt="Momo">
-    </div>
-    
-   <div class="gallery-item">
-      <img src="images/Momo/momo4.jpg" alt="momo">
-    </div>
-
-     <div class="gallery-item">
-      <img src="images/ourstory/ourstory6.jpg" alt="Slow living">
-    </div>
-    
-<div class="gallery-item">
-      <img src="images/ourstory/ourstory7.jpg" alt="Nature">
-    </div>
-    
-    <div class="gallery-item">
-      <img src="images/ourstory/ourstory2.jpg" alt="Villa details">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/ourstory/ourstory8.jpg" alt="Slow living">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/gallery/gallery40.jpg" alt="Villa">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/ourstory/ourstory1.jpg" alt="Nature">
-    </div>
-    
-<div class="gallery-item">
-      <img src="images/gallery/gallery39.jpg" alt="Villa">
-    </div>
-
+    <div class="gallery-item"><img src="images/Momo/momo7.jpg" alt="Breakfast at Momo Ella" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/gallery/gallery32.jpg" alt="Momo Ella view" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/gallery/gallery34.jpg" alt="Villa exterior" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/Momo/momo6.jpg" alt="Mountain view" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/Momo/momo1.jpg" alt="Sunset at Momo Ella" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/Momo/momo8.jpg" alt="Garden at Momo Ella" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/Momo/momo2.jpg" alt="Wildlife near Momo Ella" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/ourstory/ourstory9.jpg" alt="Momo the dog" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/ourstory/ourstory3.jpg" alt="Momo Ella story" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/Momo/momo4.jpg" alt="Momo Ella detail" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/ourstory/ourstory6.jpg" alt="Slow living at Momo Ella" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/ourstory/ourstory7.jpg" alt="Nature surrounding the villas" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/ourstory/ourstory2.jpg" alt="Villa details" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/ourstory/ourstory8.jpg" alt="Slow living moment" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/gallery/gallery40.jpg" alt="Villa view" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/ourstory/ourstory1.jpg" alt="Nature at Momo Ella" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/gallery/gallery39.jpg" alt="Villa surroundings" loading="lazy"></div>
   </div>
-
 </section>
 
-  <!-- ===== Access ===== -->
-
+<!-- ===== ACCESS ===== -->
 <section id="access">
   <div class="container">
-    <h2>Access to <span class="mobile-break"><br></span>  Momo Ella</h2>
-     <p>
-  Our local staff will meet you at the drop-off point and assist you by tuk-tuk. <span class="mobile-break"><br></span>
-    It’s only a short ride and a lovely way to begin your Ella experience.
-</p>
+    <p class="eyebrow">Getting here</p>
+    <h2>Access to <span class="mobile-break"><br></span>Momo Ella</h2>
+    <p>
+      Our local staff will meet you at the drop-off point and assist you by tuk-tuk. <span class="mobile-break"><br></span>
+      It's only a short ride and a lovely way to begin your Ella experience.
+    </p>
 
- <div class="gallery-small">
-      <img src="images/Navigation/nav1.jpg">
-      <img src="images/Navigation/nav3.jpg">
-      <img src="images/Navigation/nav4.jpg">
-      <img src="images/Navigation/nav2.jpg">
-      <img src="images/Navigation/nav6.jpg">
-      <img src="images/Navigation/nav7.jpg">
+    <div class="gallery-small">
+      <img src="images/Navigation/nav1.jpg" alt="Tuk-tuk pickup" loading="lazy">
+      <img src="images/Navigation/nav3.jpg" alt="Road to Momo Ella" loading="lazy">
+      <img src="images/Navigation/nav4.jpg" alt="Arrival at Momo Ella" loading="lazy">
+      <img src="images/Navigation/nav2.jpg" alt="Path to the villas" loading="lazy">
+      <img src="images/Navigation/nav6.jpg" alt="Surrounding hills" loading="lazy">
+      <img src="images/Navigation/nav7.jpg" alt="View along the way" loading="lazy">
     </div>
 
-
-     <div class="map">
-
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31689.318299767798!2d81.01014313150097!3d6.870849160600573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae46500074be9cd%3A0x86443b2d1ed36815!2sMOMO%20ELLA!5e0!3m2!1sja!2snz!4v1783688936132!5m2!1sja!2snz">
-          
-        </iframe>
-
-      </div>
+    <div class="map">
+      <iframe
+        title="Map showing the location of Momo Ella"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31689.318299767798!2d81.01014313150097!3d6.870849160600573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae46500074be9cd%3A0x86443b2d1ed36815!2sMOMO%20ELLA!5e0!3m2!1sja!2snz!4v1783688936132!5m2!1sja!2snz"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   </div>
 </section>
 
-
-  
-  <!-- ===== Book now ===== -->
+<!-- ===== BOOKING ===== -->
 <section id="booking">
   <div class="container">
-    <h1>Plan your stay (Best Price) </h1>
+    <p class="eyebrow">Best price, direct</p>
+    <h2>Plan Your Stay</h2>
 
-    <form class="booking-form">
-      <label>Villa</label>
-<select id="villa">
-  <option value="standard villa">Standard villa</option>
-  <option value="deluxe villa">Deluxe villa</option>
-  <option value="luxury-sol">Luxury -Sol- </option>
-  <option value="luxury-luna">Luxury -Luna- </option>
-</select>
+    <form class="booking-form" id="bookingForm">
+      <label for="villa">Villa</label>
+      <select id="villa" name="villa">
+        <option value="Standard villa">Standard villa</option>
+        <option value="Deluxe villa">Deluxe villa</option>
+        <option value="Luxury -Sol-">Luxury -Sol-</option>
+        <option value="Luxury -Luna-">Luxury -Luna-</option>
+      </select>
 
+      <label for="arrival">Arrival</label>
+      <input type="date" id="arrival" name="arrival">
 
-<label>Arrival</label>
-<input type="date" id="arrival">
+      <label for="nights">Nights</label>
+      <input type="number" id="nights" name="nights" value="2" min="1">
 
+      <label for="guests">Guests</label>
+      <input type="number" id="guests" name="guests" value="2" min="1">
 
-<label>Nights</label>
-<input type="number" id="nights" value="2">
+      <button type="button" onclick="sendWhatsApp()">
+        <i class="fa-brands fa-whatsapp"></i>
+        Check Availability
+      </button>
+    </form>
+  </div>
+</section>
 
-
-<label>Guests</label>
-<input type="number" id="guests" value="2">
-
-
-<button onclick="sendWhatsApp()">
-    <i class="fa-brands fa-whatsapp"></i>
-    Check Availability
-</button>
-          </form>
-      </div>
- </section>
-
-  
-
+<!-- ===== FRIENDS PLACE ===== -->
 <section id="friends-place">
   <div class="friends-content">
+    <p class="eyebrow">Friends nearby</p>
     <h2>Friend Places</h2>
 
     <div class="friend-item">
-      <h1>Aji Fruit Farm -Embilipitiya-</h1>
+      <h3>Aji Fruit Farm <span class="friend-location">— Embilipitiya</span></h3>
       <div class="gallery-small">
-        <img src="images/ajifarm/ajifarm1.jpg">
-        <img src="images/ajifarm/ajifarm5.jpg">
-        <img src="images/ajifarm/ajifarm6.jpg">
-        <img src="images/ajifarm/ajifarm4.jpg">
-        <img src="images/ajifarm/ajifarm2.jpg">
-        <img src="images/ajifarm/ajifarm8.jpg">
+        <img src="images/ajifarm/ajifarm1.jpg" alt="Aji Fruit Farm cottage" loading="lazy">
+        <img src="images/ajifarm/ajifarm5.jpg" alt="Aji Fruit Farm lake view" loading="lazy">
+        <img src="images/ajifarm/ajifarm6.jpg" alt="Aji Fruit Farm grounds" loading="lazy">
+        <img src="images/ajifarm/ajifarm4.jpg" alt="Aji Fruit Farm mango trees" loading="lazy">
+        <img src="images/ajifarm/ajifarm2.jpg" alt="Aji Fruit Farm scenery" loading="lazy">
+        <img src="images/ajifarm/ajifarm8.jpg" alt="Aji Fruit Farm sunset" loading="lazy">
       </div>
       <p>
-        Just a 3-hour drive from Momo Ella, our friend Aji runs beautiful cottages hidden among the mango trees, overlooking a stunning lake. 
+        Just a 3-hour drive from Momo Ella, our friend Aji runs beautiful cottages hidden among the mango trees, overlooking a stunning lake.
         Surrounded by nature, Aji Fruit Farm is a peaceful retreat and the perfect stop on your journey through Sri Lanka.
       </p>
-      <a href="https://aji-fruit-farm.lk/" target="_blank" class="friends-button">Discover More</a>
+      <a href="https://aji-fruit-farm.lk/" target="_blank" rel="noopener" class="friends-button">Discover More</a>
     </div>
 
     <div class="friend-item">
-      <h1>Achu Wave Riders -Arugam Bay-</h1>
+      <h3>Achu Wave Riders <span class="friend-location">— Arugam Bay</span></h3>
       <div class="gallery-small">
-        <img src="images/achusurf/surf1.jpg">
-        <img src="images/achusurf/surf6.jpg">
-        <img src="images/achusurf/surf4.jpg">
-        <img src="images/achusurf/surf2.jpg">
-        <img src="images/achusurf/surf3.jpg">
-        <img src="images/achusurf/surf5.jpg">
+        <img src="images/achusurf/surf1.jpg" alt="Achu Wave Riders surfing" loading="lazy">
+        <img src="images/achusurf/surf6.jpg" alt="Arugam Bay waves" loading="lazy">
+        <img src="images/achusurf/surf4.jpg" alt="Surf lesson at Arugam Bay" loading="lazy">
+        <img src="images/achusurf/surf2.jpg" alt="Achu Wave Riders team" loading="lazy">
+        <img src="images/achusurf/surf3.jpg" alt="Surfing at Arugam Bay" loading="lazy">
+        <img src="images/achusurf/surf5.jpg" alt="Arugam Bay coastline" loading="lazy">
       </div>
       <p>
         Just a 3-hour drive from Momo Ella, our surfer friends at Achu Surf Wave Riders are waiting to welcome you to the beautiful waves of Arugam Bay.
         Whether you're a beginner or an experienced surfer, they'll be there to show you the waves, teach you how to catch them, and share their love for surfing and the ocean.
       </p>
-      <a href="https://achuwaveriders.com/" target="_blank" class="friends-button">Discover More</a>
+      <a href="https://achuwaveriders.com/" target="_blank" rel="noopener" class="friends-button">Discover More</a>
     </div>
-
   </div>
 </section>
 
-  
-
+<!-- ===== FOOTER ===== -->
 <footer>
-
   <div class="footer-icons">
-
-    <a href="https://wa.me/94771238820" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/94777653307" target="_blank" rel="noopener" aria-label="WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
-
     <a href="mailto:momoella.admin@gmail.com" aria-label="Email">
       <i class="fa-solid fa-envelope"></i>
     </a>
-
-    <a href="https://www.instagram.com/momoella_privatevillas/" target="_blank" aria-label="Instagram">
+    <a href="https://www.instagram.com/momoella_privatevillas/" target="_blank" rel="noopener" aria-label="Instagram">
       <i class="fa-brands fa-instagram"></i>
     </a>
-
-    <a href="https://www.airbnb.com.au/hosting/listings" target="_blank" aria-label="Airbnb">
-  <i class="fa-brands fa-airbnb"></i>
-</a>
-
+    <a href="https://www.airbnb.com.au/hosting/listings" target="_blank" rel="noopener" aria-label="Airbnb">
+      <i class="fa-brands fa-airbnb"></i>
+    </a>
   </div>
-
-  <p class="copyright">
-    © 2026 Momo Ella Private Villas. All Rights Reserved.
-  </p>
-
+  <p class="copyright">© 2026 Momo Ella Private Villas. All Rights Reserved.</p>
 </footer>
 
-
-<!-- Back to Top Button -->
-<button id="topBtn" onclick="scrollToTop()">↑</button>
+<!-- Back to Top -->
+<button id="topBtn" aria-label="Back to top" onclick="scrollToTop()">↑</button>
 
 <script src="script.js"></script>
-
 </body>
 </html>
