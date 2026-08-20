@@ -825,7 +825,7 @@ h2 {
 }
 
 .friend-item {
-  margin-bottom: 60px; /* お好みの値に調整 */
+  margin-bottom: 60px !important; /* お好みの値に調整 */
 }
 
 .friend-item:last-child {
