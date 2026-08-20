@@ -160,7 +160,7 @@ function sendWhatsApp(){
   `Hello, I'd love to plan a stay at ${villa} from ${arrival} for ${nights} nights (${guests} guests). Are dates available?`;
 
 
-  const phone = "94771238820";
+  const phone = "+94777653307";
 
 
   const url = 
