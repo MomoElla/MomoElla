@@ -824,6 +824,14 @@ h2 {
   font-size: 15px;
 }
 
+.friend-item {
+  margin-bottom: 60px; /* お好みの値に調整 */
+}
+
+.friend-item:last-child {
+  margin-bottom: 0;
+}
+
 footer {
   padding: 50px 20px 80px; /* 下に余白を作る */
   text-align: center;
